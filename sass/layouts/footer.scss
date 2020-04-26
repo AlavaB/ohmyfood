@@ -1,0 +1,24 @@
+.footblock
+{
+    position: sticky;
+    bottom: 0;
+    background-color: $color-back;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+
+    &__link {
+        width: 280px;
+        height: 100px;
+        line-height: 100px;
+        font-family: $main-font;
+        color: $font-maincolor;
+        font-size: $link-fontsize;
+        font-weight: 1000;
+        text-align: center;
+        vertical-align: middle;
+        text-decoration: none;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

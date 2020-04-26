@@ -1,0 +1,23 @@
+@mixin menu2{
+    font-size: 3em;
+    background: -webkit-linear-gradient(#d8852e, #905bfd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: normal;
+}
+
+@mixin menu3{
+    font-size: 3.5em;
+    background: -webkit-linear-gradient(#0431df, #0887fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: normal;
+}
+
+@mixin menu4{
+    font-size: 3.5em;
+    background: -webkit-linear-gradient(#3d9339, #bfff7e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: normal;
+}
