@@ -69,7 +69,7 @@ h1 {
   margin: 0px;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 760px) {
   header {
     height: 120px;
     line-height: 120px;
@@ -85,6 +85,11 @@ h1 {
   justify-content: space-around;
 }
 
+@media screen and (max-width: 760px) {
+  .home-page {
+    display: block;
+  }
+}
 p {
   margin-top: 0px;
 }
@@ -94,7 +99,7 @@ p {
   width: 50%;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 760px) {
   .musicnote {
     height: 50px;
     margin-right: 10px;
@@ -110,10 +115,10 @@ p {
   margin: 50px;
 }
 .menu__marginleft {
-  margin-left: 100px;
+  margin-left: 150px;
 }
 .menu__marginright {
-  margin-right: 100px;
+  margin-right: 150px;
 }
 .menu__heading1 {
   margin-top: 0px;
@@ -123,29 +128,49 @@ p {
   font-size: 3.5em;
   font-weight: normal;
 }
+.menu__heading1 + p {
+  color: #3c1218;
+  font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+  font-size: 4em;
+}
 .menu__heading2 {
   font-family: "croissant_oneregular", Arial, Helvetica, sans-serif;
   font-size: 2.5em;
-  background: -webkit-linear-gradient(-78deg, #d8852e, #905bfd);
+  background: -webkit-linear-gradient(-75deg, #d8852e, #d8852e 35%, #905bfd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: normal;
+}
+.menu__heading2 + p {
+  font-family: "TT Pubs", Arial, Helvetica, sans-serif;
+  color: #d8852e;
+  font-size: 4em;
 }
 .menu__heading3 {
   font-size: 3.5em;
   font-family: "dancing_scriptregular", Arial, Helvetica, sans-serif;
-  background: -webkit-linear-gradient(-78deg, #0431df, #0887fb);
+  background: -webkit-linear-gradient(130deg, #0887fb, #0887fb 35%, #0431df);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: normal;
 }
+.menu__heading3 + p {
+  color: #0887fb;
+  font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+  font-size: 4em;
+}
 .menu__heading4 {
   font-size: 3.5em;
   font-family: "kaushan_scriptregular", Arial, Helvetica, sans-serif;
-  background: -webkit-linear-gradient(-78deg, #3d9339, #bfff7e);
+  background: -webkit-linear-gradient(130deg, #bfff7e, #bfff7e 35%, #3d9339);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: normal;
+}
+.menu__heading4 + p {
+  color: #72bf56;
+  font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+  font-size: 4em;
 }
 .menu--pink {
   background-color: #fcdfdb;
@@ -160,9 +185,59 @@ p {
   background-color: #fff5fe;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 1024px) {
+  .menu {
+    height: 600px;
+    margin: 20px;
+  }
+  .menu__marginleft {
+    margin-left: 50px;
+  }
+  .menu__marginright {
+    margin-right: 50px;
+  }
+  .menu__heading1 {
+    font-size: 2.5em;
+  }
+  .menu__heading1 + p {
+    font-size: 2em;
+  }
+  .menu__heading2 {
+    font-size: 1.5em;
+  }
+  .menu__heading2 + p {
+    font-size: 2.5em;
+  }
+  .menu__heading3 {
+    font-size: 2.5em;
+  }
+  .menu__heading3 + p {
+    font-size: 2.5em;
+  }
+  .menu__heading4 {
+    font-size: 2.5em;
+  }
+  .menu__heading4 + p {
+    font-size: 2.5em;
+  }
+
+  .musicnote-frontpage {
+    height: 50px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .menu {
+    width: 80%;
+    height: 400px;
+  }
   .menu__heading1 {
     font-size: 1.5em;
+  }
+  .menu__marginleft {
+    margin-left: 0px;
+  }
+  .menu__marginright {
+    margin-right: 0px;
   }
   .menu__heading2 {
     font-size: 1.5em;
@@ -184,7 +259,7 @@ p {
   font-weight: 1000;
   text-align: center;
   vertical-align: middle;
-  margin: 50px 25%;
+  margin: 50px 25% 50px 25%;
   border-radius: 20px;
   background-color: #579c87;
   text-decoration: none;
@@ -197,7 +272,7 @@ h3 {
   margin-top: 50px;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 760px) {
   h3 {
     font-size: 1.5em;
     margin-top: 10px;
@@ -227,12 +302,14 @@ h3 {
 @media screen and (max-width: 1400px) {
   .menu1-description {
     width: 90%;
-    height: 700px;
+    height: 1100px;
   }
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 760px) {
   .menu1-description {
-    height: 1200px;
+    height: 800px;
+    margin-bottom: 50px;
+    padding-bottom: 0px;
   }
 }
 .end-title {
@@ -245,8 +322,10 @@ h3 {
   font-size: 1em;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 760px) {
   .end-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 0.7em;
   }
 }
@@ -272,11 +351,12 @@ h3 {
 @media screen and (max-width: 1400px) {
   .menu2-description {
     width: 90%;
-    height: 700px;
+    height: 800px;
   }
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 760px) {
   .menu2-description {
+    height: 500px;
     padding-bottom: 10px;
     margin-bottom: 20px;
   }
@@ -298,10 +378,10 @@ h3 {
 @media screen and (max-width: 1400px) {
   .menu3-description {
     width: 90%;
-    height: 700px;
+    height: 900px;
   }
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 760px) {
   .menu3-description {
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -324,10 +404,10 @@ h3 {
 @media screen and (max-width: 1400px) {
   .menu4-description {
     width: 90%;
-    height: 700px;
+    height: 900px;
   }
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 760px) {
   .menu4-description {
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -366,7 +446,7 @@ h3 {
     margin-right: 30px;
   }
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 760px) {
   .dish {
     font-size: 0.7em;
   }
@@ -385,7 +465,13 @@ h3 {
   margin-top: 60px;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 1400px) {
+  .enchainement {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 760px) {
   .enchainement {
     font-size: 1em;
     margin-top: 20px;
@@ -401,7 +487,7 @@ h3 {
   font-size: 2em;
   font-family: "croissant_oneregular", Arial, Helvetica, sans-serif;
   margin-top: 80px;
-  background: -webkit-linear-gradient(-78deg, #d8852e, #905bfd);
+  background: -webkit-linear-gradient(-75deg, #d8852e, #d8852e 35%, #905bfd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: normal;
@@ -410,7 +496,7 @@ h3 {
   font-size: 2.5em;
   font-family: "dancing_scriptregular", Arial, Helvetica, sans-serif;
   margin-top: 80px;
-  background: -webkit-linear-gradient(-78deg, #0431df, #0887fb);
+  background: -webkit-linear-gradient(130deg, #0887fb, #0887fb 35%, #0431df);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: normal;
@@ -419,13 +505,13 @@ h3 {
   font-size: 2.5em;
   font-family: "kaushan_scriptregular", Arial, Helvetica, sans-serif;
   margin-top: 80px;
-  background: -webkit-linear-gradient(-78deg, #3d9339, #bfff7e);
+  background: -webkit-linear-gradient(130deg, #bfff7e, #bfff7e 35%, #3d9339);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: normal;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 760px) {
   .menu__ending1 {
     font-size: 2em;
     font-weight: lighter;
@@ -466,7 +552,7 @@ h3 {
   margin-right: 20px;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 760px) {
   .footblock {
     height: 80px;
   }

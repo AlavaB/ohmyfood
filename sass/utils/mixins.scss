@@ -1,19 +1,19 @@
 @mixin menu2{
-    background: -webkit-linear-gradient(-78deg, #d8852e, #905bfd);
+    background: -webkit-linear-gradient(-75deg, #d8852e, #d8852e 35%, #905bfd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: normal;
 }
 
 @mixin menu3{
-    background: -webkit-linear-gradient(-78deg, #0431df, #0887fb);
+    background: -webkit-linear-gradient(130deg, #0887fb, #0887fb 35%, #0431df);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: normal;
 }
 
 @mixin menu4{
-    background: -webkit-linear-gradient(-78deg, #3d9339, #bfff7e);
+    background: -webkit-linear-gradient(130deg, #bfff7e, #bfff7e 35%, #3d9339);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: normal;
