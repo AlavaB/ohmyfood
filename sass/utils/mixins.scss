@@ -1,23 +1,30 @@
 @mixin menu2{
-    font-size: 3em;
-    background: -webkit-linear-gradient(#d8852e, #905bfd);
+    background: -webkit-linear-gradient(-78deg, #d8852e, #905bfd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: normal;
 }
 
 @mixin menu3{
-    font-size: 3.5em;
-    background: -webkit-linear-gradient(#0431df, #0887fb);
+    background: -webkit-linear-gradient(-78deg, #0431df, #0887fb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: normal;
 }
 
 @mixin menu4{
-    font-size: 3.5em;
-    background: -webkit-linear-gradient(#3d9339, #bfff7e);
+    background: -webkit-linear-gradient(-78deg, #3d9339, #bfff7e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: normal;
+}
+
+@mixin menupresentation{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+    padding-top: 20px;
 }

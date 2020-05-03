@@ -3,14 +3,13 @@
     position: sticky;
     bottom: 0;
     background-color: $color-back;
-    height: 100px;
+    height: 150px;
     display: flex;
     justify-content: space-between;
-
     &__link {
         width: 280px;
         height: 100px;
-        line-height: 100px;
+        line-height: 150px;
         font-family: $main-font;
         color: $font-maincolor;
         font-size: $link-fontsize;
@@ -18,7 +17,22 @@
         text-align: center;
         vertical-align: middle;
         text-decoration: none;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 560px)
+{
+    .footblock
+    {
+        height: 80px;
+        &__link
+        {
+            font-size: 1em;
+            line-height: 80px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
     }
 }
