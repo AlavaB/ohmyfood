@@ -1,31 +1,28 @@
 .home-page
 {
+
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; 
 }
-@media screen and (max-width: 760px)
+@media screen and (max-width: 768px)
 {
     .home-page
     {
-        display: block;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
-}
-p
-{
-    margin-top: 0px;
 }
 .link
 {
-    text-decoration: none;
     width: 50%;
+    text-decoration: none;    
 }
-@media screen and (max-width: 760px)
+@media screen and (max-width: 768px)
 {
-    .musicnote
+    .link
     {
-        height: 50px;
-        margin-right: 10px;
+        width: 70%;
     }
 }
 .menu
@@ -35,57 +32,62 @@ p
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    box-shadow: 1px 1px 12px #ededed;
-    margin: 50px;
+    box-shadow: 2px 2px 24px #ededed;
+    margin: 60px;
+    &__margintop {
+        margin-top: 80px;
+    }
     &__marginleft {
-        margin-left: 150px;
+        margin-left: 170px;
     }
     &__marginright {
-        margin-right: 150px;
+        margin-right: 170px;
     }
     &__heading1 {
-        margin-top: 0px;
-        margin-bottom: 0px;
         font-family: $menu1-font;
         color: $menu1-color;
-        font-size: 3.5em;
+        font-size: 3em;
         font-weight: normal;
         & + p {
             color: $menu1-color;
             font-family: $font-menu;
             font-size: 4em;
+            margin-top: 15px;
         }
     }
     &__heading2 {
         font-family: $menu2-font;
-        font-size: 2.5em;
+        font-size: 2em;
         @include menu2;
         & + p {
             font-family: 'TT Pubs', Arial, Helvetica, sans-serif;
             color: #d8852e;
             font-size: 4em;
+            margin-top: 40px;
         }
-    }    
+    } 
     &__heading3 {
-        font-size: 3.5em;
+        font-size: 3em;
         font-family: $menu3-font;
         @include menu3;
         & + p {
             color: #0887fb;
             font-family: $font-menu;
             font-size: 4em;
+            margin-top: 40px;
         }
     }
     &__heading4 {
-        font-size: 3.5em;
+        font-size: 3em;
         font-family: $menu4-font;
         @include menu4;      
         & + p {
             color: #72bf56;
             font-family: $font-menu;
             font-size: 4em;
+            margin-top: 40px;
         }
-    }    
+    } 
     &--pink {
         background-color: $pink;
     }
@@ -97,9 +99,9 @@ p
     }
     &--lightmagenta {
         background-color: $lightmagenta;
-    }
+    }  
 }
-@media screen and (max-width: 1024px)
+@media screen and (max-width: 1400px)
 {
     .menu
     {
@@ -113,7 +115,7 @@ p
         }
         &__heading1
         {
-            font-size: 2.5em;
+            font-size: 3em;
             & + p 
             {
                 font-size: 2em;
@@ -144,42 +146,66 @@ p
             }
         }
     }
-    .musicnote-frontpage
-    {
-        height: 50px;
-    }
 }
-@media screen and (max-width: 760px)
+
+@media screen and (max-width: 768px)
 {
     .menu
     {
-        width: 80%;
-        height: 400px;
-        &__heading1 
-        {
-            font-size: 1.5em;
-        }
+        height: 300px;
+        margin: 0%;
+        margin-bottom: 20px;
         &__marginleft {
-            margin-left: 0px;
+            margin-left: 0;
         }
         &__marginright {
-            margin-right: 0px;
+            margin-right: 0;
         }
-        
-	&__heading2
+        &__heading1 
         {
-            font-size: 1.5em;
-        }   
-	&__heading3
-        {
-            font-size: 1.5em;
-        }       
-	&__heading4
-        {
-            font-size: 1.5em;
+            font-size: 2.5em;
+            & + p {
+                font-size: 1.2em;
+            } 
         }         
+        &__heading2
+        {
+            font-size: 1.8em;
+            & + p {
+                font-size: 1.2em;
+            }
+        }   
+        &__heading3
+        {
+            font-size: 1.5em;
+            & + p {
+            font-size: 1.2em;
+            } 
+        }       
+        &__heading4
+        {
+            font-size: 1.5em;
+            & + p {
+            font-size: 1.2em;
+            }
+        }
+    }   
+}
+@media screen and (max-width: 1400px)
+{
+    .musicnote-frontpage
+    {
+        height: 70px;
     }
 }
+@media screen and (max-width: 768px)
+{
+    .musicnote-frontpage
+    {
+        height: 50px;
+        
+    }
+} 
 .comingsoon 
 {
     width: 50%;
@@ -196,22 +222,24 @@ p
     background-color: $color-back;
     text-decoration: none;
 }
-
-/*****************MENU*************************/
-h3
+@media screen and (max-width: 1400px)
 {
-    font-family: $main-font;
-    font-size: 2.5em;
-    margin-top: 50px;
-}
-@media screen and (max-width: 760px)
-{
-    h3
+    .comingsoon
     {
-        font-size: 1.5em;
-        margin-top: 10px;
+        font-size: 2em;
+    }  
+}
+@media screen and (max-width: 768px)
+{
+    .comingsoon
+    {
+        font-size: 1em;
+        height: 50px;
+        line-height: 50px;
     }
 }
+
+/*****************MENU*************************/
 .menu-presentation
 {
     width: 100%;
@@ -219,11 +247,72 @@ h3
     flex-direction: column;
     align-items: center;
 }
+h3
+{
+    font-family: $main-font;
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+@media screen and (max-width: 1400px)
+{
+    h3
+    {
+        font-size: 2em;
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    h3
+    {
+        font-size: 1.5em;
+    }
+}
+.musicnote
+{
+    margin-top: 30px;
+}
+@media screen and (max-width: 1400px)
+{
+    .musicnote {
+        height: 80px;
+
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .musicnote {
+        height: 50px;
+    }
+}
+.menu1-enchainement
+{
+    font-size: 1.8em;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+@media screen and (max-width: 1400px)
+{
+    .menu1-enchainement {
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .menu1-enchainement {
+        font-size: 1.2em;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+}
 .menu1-description
 {
-    @include menupresentation;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 100px;
     height: 1200px;
     font-family: $font-menu;
+    font-size: 1.3em;
     color: #3d1319;
     background-color: $pink;
 }
@@ -231,18 +320,61 @@ h3
 {
     .menu1-description
     {
-        width: 90%;
-        height: 1100px;
+        width: 95%;
+        height: 1000px;
+        font-size: 1em;
     }
 }
-@media screen and (max-width: 760px)
+@media screen and (max-width: 768px)
 {
     .menu1-description
     {
-        height: 800px;
+        width: 95%;
+        height: 700px;
         margin-bottom: 50px;
-        padding-bottom: 0px;
+        font-size: 0.7em;
     }
+}
+.menu1-dish
+{
+    display: flex;
+    margin-bottom: 10px;
+    &__description {
+        flex: 3.5;
+        text-align: left;
+        margin-left: 130px;
+    }
+    &__price {
+        flex: 0.5;
+        text-align: right;
+        margin-right: 130px;
+    }
+}
+@media screen and (max-width: 1400px)
+{
+    .menu1-dish
+    {
+        &__description {
+            margin-left: 50px;
+        }
+        &__price {          
+            margin-right: 50px;
+        }
+    }   
+}
+@media screen and (max-width: 768px)
+{
+    .menu1-dish
+    {
+        &__description {
+            flex: 3.5;
+            margin-left: 10px;
+        }
+        &__price {
+            flex: 0.5;
+            margin-right: 10px;
+        }
+    }  
 }
 .end-title
 {
@@ -250,112 +382,121 @@ h3
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 80px;
-    margin-bottom: 80px;
     font-size: 1em;
-}
-@media screen and (max-width: 760px)
-{
-    .end-title
-    {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-size: 0.7em;
-    }
+    margin-top: 20px;
 }
 .musicnote-end
 {
-    height: 50px;
+    height: 80px;
     margin-right: 10px;
+}
+@media screen and (max-width: 1400px)
+{
+    .musicnote-end {
+        height: 70px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .musicnote-end
+    {
+        height: 50px;
+        margin-right: 10px;
+    }
+}
+.menu2-enchainement
+{
+    font-size: 1.5em;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+@media screen and (max-width: 1400px)
+{
+    .menu2-enchainement {
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .menu2-enchainement {
+        font-size: 1.2em;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
 }
 .menu2-description
 {
-    @include menupresentation;
-    height: 1000px;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 100px;
+    height: 900px;
     font-family: 'TT Pubs', Arial, Helvetica, sans-serif;
-    color: $menu1-color;
+    font-size: 1.5em;
     background-color: $lightpink;
 }
 @media screen and (max-width: 1400px)
 {
     .menu2-description
     {
-        width: 90%;
-        height: 800px;
+        width: 95%;
+        height: 1000px;
+        font-size: 1em;
     }
 }
-@media screen and (max-width: 760px)
+@media screen and (max-width: 768px)
 {
     .menu2-description
     {
-        height: 500px;
-        padding-bottom: 10px;
-        margin-bottom: 20px;
+        width: 95%;
+        height: 700px;
+        margin-bottom: 50px;
+        font-size: 0.7em;
     }
 }
-.menu3-description
+.menu2-dish
 {
-    @include menupresentation;
-    height: 1100px;
-    font-family: $font-menu;
-    color: $menu1-color;
-    background-color: $lightgrey;
-}
-@media screen and (max-width: 1400px)
-{
-    .menu3-description
-    {
-        width: 90%;
-        height: 900px;
-    }
-}
-@media screen and (max-width: 760px)
-{
-    .menu3-description
-    {
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-    }
-}
-.menu4-description
-{
-    @include menupresentation;
-    height: 1200px;
-    font-family: $font-menu;
-    color: $menu1-color;
-    background-color: $lightmagenta;
-}
-@media screen and (max-width: 1400px)
-{
-    .menu4-description
-    {
-        width: 90%;
-        height: 900px;
-    }
-}
-@media screen and (max-width: 760px)
-{
-    .menu4-description
-    {
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-    }
-}
-.dish
-{    
     display: flex;
-    flex: 3;
-    font-size: 1.3em;
+    margin-bottom: 20px;
     &__description {
         flex: 3;
         text-align: left;
-        margin-left: 180px;
+        margin-left: 150px;
     }
     &__price {
         flex: 1;
-        margin-right: 180px;
         text-align: right;
+        margin-right: 150px;
     }
+    
+}
+@media screen and (max-width: 1400px)
+{
+    .menu2-dish
+    {
+        &__description {
+            margin-left: 50px;
+        }
+        &__price {          
+            margin-right: 50px;
+        }
+    }   
+}
+@media screen and (max-width: 768px)
+{
+    .menu2-dish
+    {
+        &__description {
+            flex: 3.5;
+            margin-left: 10px;
+        }
+        &__price {
+            flex: 0.5;
+            margin-right: 10px;
+        }
+    }  
+}
+.dish
+{
     &__starter {
         color: #c67412;
     }
@@ -366,114 +507,183 @@ h3
         color: #6e4ccc;
     }
 }
-@media screen and (max-width: 1400px)
+
+.menu3-enchainement
 {
-    .dish
-    {
-        &__description 
-        {
-            margin-left: 30px;
-        }
-        &__price
-        {
-            margin-right: 30px;
-        }
-    }
-}
-@media screen and (max-width: 760px)
-{
-    .dish
-    {
-        font-size: 0.7em;
-        &__description
-        {
-            width: 80%;
-            margin-left: 5px;
-        }
-        &__price
-        {
-            width: 20%;
-            margin-right: 5px;
-        }
-    }
-}
-.enchainement
-{
-    font-size: 2em;
-    margin-bottom: 30px;
-    margin-top: 60px;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    margin-top: 50px;
 }
 @media screen and (max-width: 1400px)
 {
-    .enchainement
-    {
+    .menu3-enchainement {
         font-size: 1.5em;
-        margin-top: 20px;
     }
 }
-@media screen and (max-width: 760px)
+@media screen and (max-width: 768px)
 {
-    .enchainement
-    {
-        font-size: 1em;
+    .menu3-enchainement {
+        font-size: 1.2em;
         margin-top: 20px;
         margin-bottom: 15px;
     }
 }
-.menu
+.menu3-description
 {
-    &__ending1
+    width: 80%;
+    text-align: center;
+    margin-bottom: 100px;
+    height: 900px;
+    font-family: $font-menu;
+    background-color: $lightgrey;
+}
+@media screen and (max-width: 1400px)
+{
+    .menu3-description
     {
-        font-family: $menu1-font;
-        font-size: 3em;
-        font-weight: lighter;
+        width: 95%;
+        height: 1000px;
+        font-size: 1em;
     }
-    &__ending2 
+}
+@media screen and (max-width: 768px)
+{
+    .menu3-description
     {
-        font-size: 2em;
-        font-family: $menu2-font;
-        margin-top: 80px;
-        @include menu2
+        width: 95%;
+        height: 700px;
+        margin-bottom: 50px;
+        font-size: 0.7em;
     }
-    &__ending3 
+}
+.menu3-dish
+{
+    display: flex;
+    margin-bottom: 15px;
+    &__description {
+        flex: 3;
+        text-align: left;
+        margin-left: 150px;
+    }
+    &__price {
+        flex: 1;
+        text-align: right;
+        margin-right: 150px;
+    }
+}
+@media screen and (max-width: 1400px)
+{
+    .menu3-dish
     {
-        font-size: 2.5em;
-        font-family: $menu3-font;
-        margin-top: 80px;
-        @include menu3
-    }
-    &__ending4 
+        &__description {
+            margin-left: 50px;
+        }
+        &__price {          
+            margin-right: 50px;
+        }
+    }   
+}
+@media screen and (max-width: 768px)
+{
+    .menu3-dish
     {
-        font-size: 2.5em;
-        font-family: $menu4-font;
-        margin-top: 80px;
-        @include menu4
+        &__description {
+            flex: 3.5;
+            margin-left: 10px;
+        }
+        &__price {
+            flex: 0.5;
+            margin-right: 10px;
+        }
+    }  
+}
+.menu4-enchainement
+{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+@media screen and (max-width: 1400px)
+{
+    .menu4-enchainement {
+        font-size: 1.5em;
     }
+}
+@media screen and (max-width: 768px)
+{
+    .menu4-enchainement {
+        font-size: 1.2em;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+}
+.menu4-description
+{
+    width: 80%;
+    text-align: center;
+    margin-bottom: 100px;
+    height: 900px;
+    font-family: $font-menu;
+    background-color: $lightmagenta;
+}
+@media screen and (max-width: 1400px)
+{
+    .menu4-description
+    {
+        width: 95%;
+        height: 1000px;
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .menu4-description
+    {
+        width: 95%;
+        height: 700px;
+        margin-bottom: 50px;
+        font-size: 0.7em;
+    }
+}
+.menu4-dish
+{
+    display: flex;
+    margin-bottom: 15px;
+    &__description {
+        flex: 3;
+        text-align: left;
+        margin-left: 150px;
+    }
+    &__price {
+        flex: 1;
+        text-align: right;
+        margin-right: 150px;
+    }
+}
+@media screen and (max-width: 1400px)
+{
+    .menu4-dish
+    {
+        &__description {
+            margin-left: 50px;
+        }
+        &__price {          
+            margin-right: 50px;
+        }
+    }   
+}
+@media screen and (max-width: 768px)
+{
+    .menu4-dish
+    {
+        &__description {
+            flex: 3.5;
+            margin-left: 10px;
+        }
+        &__price {
+            flex: 0.5;
+            margin-right: 10px;
+        }
+    }  
 }
 
-@media screen and (max-width: 760px)
-{
-    .menu 
-    {
-        &__ending1
-        {
-            font-size: 2em;
-            font-weight: lighter;
-        }
-        &__ending2
-        {
-            font-size: 1.5em;
-            margin-top: 20px;
-        }        
-        &__ending3
-        {
-            font-size: 1.5em;
-            margin-top: 20px;
-        }        
-        &__ending4
-        {
-            font-size: 1.5em;
-            margin-top: 20px;
-        }
-    }
-}

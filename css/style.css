@@ -2,6 +2,16 @@ body {
   margin: 0;
 }
 
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 @font-face {
   font-family: "montserratbold";
   src: url("../font/montserrat-bold-webfont.woff2") format("woff2"), url("../font/montserrat-bold-webfont.woff") format("woff");
@@ -61,48 +71,58 @@ header {
   margin-bottom: 40px;
 }
 
+@media screen and (max-width: 1400px) {
+  header {
+    height: 150px;
+    line-height: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+  }
+}
 h1 {
   margin-top: 0px;
-  font-size: 3.5em;
+  font-size: 4.5em;
   letter-spacing: -5px;
   font-family: "montserratbold", Arial, Helvetica, sans-serif;
   margin: 0px;
 }
 
-@media screen and (max-width: 760px) {
-  header {
-    height: 120px;
-    line-height: 120px;
-  }
-
+@media screen and (max-width: 1400px) {
   h1 {
-    font-size: 2.5em;
+    font-size: 3.2em;
+  }
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+    letter-spacing: -2px;
   }
 }
 .home-page {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
   .home-page {
-    display: block;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 }
-p {
-  margin-top: 0px;
-}
-
 .link {
-  text-decoration: none;
   width: 50%;
+  text-decoration: none;
 }
 
-@media screen and (max-width: 760px) {
-  .musicnote {
-    height: 50px;
-    margin-right: 10px;
+@media screen and (max-width: 768px) {
+  .link {
+    width: 70%;
   }
 }
 .menu {
@@ -111,31 +131,33 @@ p {
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  box-shadow: 1px 1px 12px #ededed;
-  margin: 50px;
+  box-shadow: 2px 2px 24px #ededed;
+  margin: 60px;
+}
+.menu__margintop {
+  margin-top: 80px;
 }
 .menu__marginleft {
-  margin-left: 150px;
+  margin-left: 170px;
 }
 .menu__marginright {
-  margin-right: 150px;
+  margin-right: 170px;
 }
 .menu__heading1 {
-  margin-top: 0px;
-  margin-bottom: 0px;
   font-family: "devonshireregular", Arial, Helvetica, sans-serif;
   color: #3c1218;
-  font-size: 3.5em;
+  font-size: 3em;
   font-weight: normal;
 }
 .menu__heading1 + p {
   color: #3c1218;
   font-family: "Segoe Print", Arial, Helvetica, sans-serif;
   font-size: 4em;
+  margin-top: 15px;
 }
 .menu__heading2 {
   font-family: "croissant_oneregular", Arial, Helvetica, sans-serif;
-  font-size: 2.5em;
+  font-size: 2em;
   background: -webkit-linear-gradient(-75deg, #d8852e, #d8852e 35%, #905bfd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -145,9 +167,10 @@ p {
   font-family: "TT Pubs", Arial, Helvetica, sans-serif;
   color: #d8852e;
   font-size: 4em;
+  margin-top: 40px;
 }
 .menu__heading3 {
-  font-size: 3.5em;
+  font-size: 3em;
   font-family: "dancing_scriptregular", Arial, Helvetica, sans-serif;
   background: -webkit-linear-gradient(130deg, #0887fb, #0887fb 35%, #0431df);
   -webkit-background-clip: text;
@@ -158,9 +181,10 @@ p {
   color: #0887fb;
   font-family: "Segoe Print", Arial, Helvetica, sans-serif;
   font-size: 4em;
+  margin-top: 40px;
 }
 .menu__heading4 {
-  font-size: 3.5em;
+  font-size: 3em;
   font-family: "kaushan_scriptregular", Arial, Helvetica, sans-serif;
   background: -webkit-linear-gradient(130deg, #bfff7e, #bfff7e 35%, #3d9339);
   -webkit-background-clip: text;
@@ -171,6 +195,7 @@ p {
   color: #72bf56;
   font-family: "Segoe Print", Arial, Helvetica, sans-serif;
   font-size: 4em;
+  margin-top: 40px;
 }
 .menu--pink {
   background-color: #fcdfdb;
@@ -185,7 +210,7 @@ p {
   background-color: #fff5fe;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1400px) {
   .menu {
     height: 600px;
     margin: 20px;
@@ -197,7 +222,7 @@ p {
     margin-right: 50px;
   }
   .menu__heading1 {
-    font-size: 2.5em;
+    font-size: 3em;
   }
   .menu__heading1 + p {
     font-size: 2em;
@@ -220,33 +245,52 @@ p {
   .menu__heading4 + p {
     font-size: 2.5em;
   }
-
-  .musicnote-frontpage {
-    height: 50px;
-  }
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
   .menu {
-    width: 80%;
-    height: 400px;
-  }
-  .menu__heading1 {
-    font-size: 1.5em;
+    height: 300px;
+    margin: 0%;
+    margin-bottom: 20px;
   }
   .menu__marginleft {
-    margin-left: 0px;
+    margin-left: 0;
   }
   .menu__marginright {
-    margin-right: 0px;
+    margin-right: 0;
+  }
+  .menu__heading1 {
+    font-size: 2.5em;
+  }
+  .menu__heading1 + p {
+    font-size: 1.2em;
   }
   .menu__heading2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
+  }
+  .menu__heading2 + p {
+    font-size: 1.2em;
   }
   .menu__heading3 {
     font-size: 1.5em;
   }
+  .menu__heading3 + p {
+    font-size: 1.2em;
+  }
   .menu__heading4 {
     font-size: 1.5em;
+  }
+  .menu__heading4 + p {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .musicnote-frontpage {
+    height: 70px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .musicnote-frontpage {
+    height: 50px;
   }
 }
 .comingsoon {
@@ -265,19 +309,19 @@ p {
   text-decoration: none;
 }
 
-/*****************MENU*************************/
-h3 {
-  font-family: "montserratbold", Arial, Helvetica, sans-serif;
-  font-size: 2.5em;
-  margin-top: 50px;
-}
-
-@media screen and (max-width: 760px) {
-  h3 {
-    font-size: 1.5em;
-    margin-top: 10px;
+@media screen and (max-width: 1400px) {
+  .comingsoon {
+    font-size: 2em;
   }
 }
+@media screen and (max-width: 768px) {
+  .comingsoon {
+    font-size: 1em;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+/*****************MENU*************************/
 .menu-presentation {
   width: 100%;
   display: flex;
@@ -285,31 +329,112 @@ h3 {
   align-items: center;
 }
 
+h3 {
+  font-family: "montserratbold", Arial, Helvetica, sans-serif;
+  font-size: 2.5em;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+  h3 {
+    font-size: 2em;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 1.5em;
+  }
+}
+.musicnote {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1400px) {
+  .musicnote {
+    height: 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .musicnote {
+    height: 50px;
+  }
+}
+.menu1-enchainement {
+  font-size: 1.8em;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 1400px) {
+  .menu1-enchainement {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu1-enchainement {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+}
 .menu1-description {
   width: 80%;
-  display: flex;
-  flex-direction: column;
   text-align: center;
   margin-bottom: 100px;
-  padding-bottom: 50px;
-  padding-top: 20px;
   height: 1200px;
   font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
   color: #3d1319;
   background-color: #fcdfdb;
 }
 
 @media screen and (max-width: 1400px) {
   .menu1-description {
-    width: 90%;
-    height: 1100px;
+    width: 95%;
+    height: 1000px;
+    font-size: 1em;
   }
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
   .menu1-description {
-    height: 800px;
+    width: 95%;
+    height: 700px;
     margin-bottom: 50px;
-    padding-bottom: 0px;
+    font-size: 0.7em;
+  }
+}
+.menu1-dish {
+  display: flex;
+  margin-bottom: 10px;
+}
+.menu1-dish__description {
+  flex: 3.5;
+  text-align: left;
+  margin-left: 130px;
+}
+.menu1-dish__price {
+  flex: 0.5;
+  text-align: right;
+  margin-right: 130px;
+}
+
+@media screen and (max-width: 1400px) {
+  .menu1-dish__description {
+    margin-left: 50px;
+  }
+  .menu1-dish__price {
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu1-dish__description {
+    flex: 3.5;
+    margin-left: 10px;
+  }
+  .menu1-dish__price {
+    flex: 0.5;
+    margin-right: 10px;
   }
 }
 .end-title {
@@ -317,116 +442,101 @@ h3 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 80px;
-  margin-bottom: 80px;
   font-size: 1em;
+  margin-top: 20px;
 }
 
-@media screen and (max-width: 760px) {
-  .end-title {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 0.7em;
-  }
-}
 .musicnote-end {
-  height: 50px;
+  height: 80px;
   margin-right: 10px;
 }
 
+@media screen and (max-width: 1400px) {
+  .musicnote-end {
+    height: 70px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .musicnote-end {
+    height: 50px;
+    margin-right: 10px;
+  }
+}
+.menu2-enchainement {
+  font-size: 1.5em;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 1400px) {
+  .menu2-enchainement {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu2-enchainement {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+}
 .menu2-description {
   width: 80%;
-  display: flex;
-  flex-direction: column;
   text-align: center;
   margin-bottom: 100px;
-  padding-bottom: 50px;
-  padding-top: 20px;
-  height: 1000px;
+  height: 900px;
   font-family: "TT Pubs", Arial, Helvetica, sans-serif;
-  color: #3c1218;
+  font-size: 1.5em;
   background-color: #fff5fe;
 }
 
 @media screen and (max-width: 1400px) {
   .menu2-description {
-    width: 90%;
-    height: 800px;
+    width: 95%;
+    height: 1000px;
+    font-size: 1em;
   }
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
   .menu2-description {
-    height: 500px;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    width: 95%;
+    height: 700px;
+    margin-bottom: 50px;
+    font-size: 0.7em;
   }
 }
-.menu3-description {
-  width: 80%;
+.menu2-dish {
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-bottom: 100px;
-  padding-bottom: 50px;
-  padding-top: 20px;
-  height: 1100px;
-  font-family: "Segoe Print", Arial, Helvetica, sans-serif;
-  color: #3c1218;
-  background-color: #f9f9f9;
+  margin-bottom: 20px;
 }
-
-@media screen and (max-width: 1400px) {
-  .menu3-description {
-    width: 90%;
-    height: 900px;
-  }
-}
-@media screen and (max-width: 760px) {
-  .menu3-description {
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-  }
-}
-.menu4-description {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-bottom: 100px;
-  padding-bottom: 50px;
-  padding-top: 20px;
-  height: 1200px;
-  font-family: "Segoe Print", Arial, Helvetica, sans-serif;
-  color: #3c1218;
-  background-color: #fff5fe;
-}
-
-@media screen and (max-width: 1400px) {
-  .menu4-description {
-    width: 90%;
-    height: 900px;
-  }
-}
-@media screen and (max-width: 760px) {
-  .menu4-description {
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-  }
-}
-.dish {
-  display: flex;
-  flex: 3;
-  font-size: 1.3em;
-}
-.dish__description {
+.menu2-dish__description {
   flex: 3;
   text-align: left;
-  margin-left: 180px;
+  margin-left: 150px;
 }
-.dish__price {
+.menu2-dish__price {
   flex: 1;
-  margin-right: 180px;
   text-align: right;
+  margin-right: 150px;
+}
+
+@media screen and (max-width: 1400px) {
+  .menu2-dish__description {
+    margin-left: 50px;
+  }
+  .menu2-dish__price {
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu2-dish__description {
+    flex: 3.5;
+    margin-left: 10px;
+  }
+  .menu2-dish__price {
+    flex: 0.5;
+    margin-right: 10px;
+  }
 }
 .dish__starter {
   color: #c67412;
@@ -438,95 +548,154 @@ h3 {
   color: #6e4ccc;
 }
 
-@media screen and (max-width: 1400px) {
-  .dish__description {
-    margin-left: 30px;
-  }
-  .dish__price {
-    margin-right: 30px;
-  }
-}
-@media screen and (max-width: 760px) {
-  .dish {
-    font-size: 0.7em;
-  }
-  .dish__description {
-    width: 80%;
-    margin-left: 5px;
-  }
-  .dish__price {
-    width: 20%;
-    margin-right: 5px;
-  }
-}
-.enchainement {
-  font-size: 2em;
-  margin-bottom: 30px;
-  margin-top: 60px;
+.menu3-enchainement {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 @media screen and (max-width: 1400px) {
-  .enchainement {
+  .menu3-enchainement {
     font-size: 1.5em;
-    margin-top: 20px;
   }
 }
-@media screen and (max-width: 760px) {
-  .enchainement {
-    font-size: 1em;
+@media screen and (max-width: 768px) {
+  .menu3-enchainement {
+    font-size: 1.2em;
     margin-top: 20px;
     margin-bottom: 15px;
   }
 }
-.menu__ending1 {
-  font-family: "devonshireregular", Arial, Helvetica, sans-serif;
-  font-size: 3em;
-  font-weight: lighter;
-}
-.menu__ending2 {
-  font-size: 2em;
-  font-family: "croissant_oneregular", Arial, Helvetica, sans-serif;
-  margin-top: 80px;
-  background: -webkit-linear-gradient(-75deg, #d8852e, #d8852e 35%, #905bfd);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: normal;
-}
-.menu__ending3 {
-  font-size: 2.5em;
-  font-family: "dancing_scriptregular", Arial, Helvetica, sans-serif;
-  margin-top: 80px;
-  background: -webkit-linear-gradient(130deg, #0887fb, #0887fb 35%, #0431df);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: normal;
-}
-.menu__ending4 {
-  font-size: 2.5em;
-  font-family: "kaushan_scriptregular", Arial, Helvetica, sans-serif;
-  margin-top: 80px;
-  background: -webkit-linear-gradient(130deg, #bfff7e, #bfff7e 35%, #3d9339);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: normal;
+.menu3-description {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 100px;
+  height: 900px;
+  font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
 }
 
-@media screen and (max-width: 760px) {
-  .menu__ending1 {
-    font-size: 2em;
-    font-weight: lighter;
+@media screen and (max-width: 1400px) {
+  .menu3-description {
+    width: 95%;
+    height: 1000px;
+    font-size: 1em;
   }
-  .menu__ending2 {
-    font-size: 1.5em;
-    margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .menu3-description {
+    width: 95%;
+    height: 700px;
+    margin-bottom: 50px;
+    font-size: 0.7em;
   }
-  .menu__ending3 {
-    font-size: 1.5em;
-    margin-top: 20px;
+}
+.menu3-dish {
+  display: flex;
+  margin-bottom: 15px;
+}
+.menu3-dish__description {
+  flex: 3;
+  text-align: left;
+  margin-left: 150px;
+}
+.menu3-dish__price {
+  flex: 1;
+  text-align: right;
+  margin-right: 150px;
+}
+
+@media screen and (max-width: 1400px) {
+  .menu3-dish__description {
+    margin-left: 50px;
   }
-  .menu__ending4 {
+  .menu3-dish__price {
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu3-dish__description {
+    flex: 3.5;
+    margin-left: 10px;
+  }
+  .menu3-dish__price {
+    flex: 0.5;
+    margin-right: 10px;
+  }
+}
+.menu4-enchainement {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 1400px) {
+  .menu4-enchainement {
     font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu4-enchainement {
+    font-size: 1.2em;
     margin-top: 20px;
+    margin-bottom: 15px;
+  }
+}
+.menu4-description {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 100px;
+  height: 900px;
+  font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+  background-color: #fff5fe;
+}
+
+@media screen and (max-width: 1400px) {
+  .menu4-description {
+    width: 95%;
+    height: 1000px;
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu4-description {
+    width: 95%;
+    height: 700px;
+    margin-bottom: 50px;
+    font-size: 0.7em;
+  }
+}
+.menu4-dish {
+  display: flex;
+  margin-bottom: 15px;
+}
+.menu4-dish__description {
+  flex: 3;
+  text-align: left;
+  margin-left: 150px;
+}
+.menu4-dish__price {
+  flex: 1;
+  text-align: right;
+  margin-right: 150px;
+}
+
+@media screen and (max-width: 1400px) {
+  .menu4-dish__description {
+    margin-left: 50px;
+  }
+  .menu4-dish__price {
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu4-dish__description {
+    flex: 3.5;
+    margin-left: 10px;
+  }
+  .menu4-dish__price {
+    flex: 0.5;
+    margin-right: 10px;
   }
 }
 .footblock {
@@ -552,13 +721,22 @@ h3 {
   margin-right: 20px;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 1400px) {
   .footblock {
-    height: 80px;
+    height: 100px;
+  }
+  .footblock__link {
+    font-size: 1.8em;
+    line-height: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footblock {
+    height: 70px;
   }
   .footblock__link {
     font-size: 1em;
-    line-height: 80px;
+    line-height: 70px;
     margin-left: 10px;
     margin-right: 10px;
   }

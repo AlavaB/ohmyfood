@@ -21,15 +21,27 @@
         margin-right: 20px;
     }
 }
-@media screen and (max-width: 760px)
+@media screen and (max-width: 1400px)
 {
     .footblock
     {
-        height: 80px;
+        height: 100px;
+        &__link
+        {
+            font-size: 1.8em;
+            line-height: 100px;
+        }
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .footblock
+    {
+        height: 70px;
         &__link
         {
             font-size: 1em;
-            line-height: 80px;
+            line-height: 70px;
             margin-left: 10px;
             margin-right: 10px;
         }
