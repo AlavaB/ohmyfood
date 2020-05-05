@@ -113,41 +113,32 @@
         &__marginright {
             margin-right: 50px;
         }
-        &__heading1
-        {
-            font-size: 3em;
-            & + p 
-            {
+        &__heading1 {
+            font-size: 2.8em;
+            & + p {
                 font-size: 2em;
             }
         }
-        &__heading2
-        {
-            font-size: 1.5em;
-            & + p
-            {
+        &__heading2 {
+            font-size: 1.7em;
+            & + p {
                 font-size: 2.5em;
             }
         }
-        &__heading3
-        {
+        &__heading3 {
             font-size: 2.5em;
-            & + p
-            {
+            & + p {
                 font-size: 2.5em;
             }
         }
-        &__heading4
-        {
+        &__heading4 {
             font-size: 2.5em;
-            & + p
-            {
+            & + p {
                 font-size: 2.5em;
             }
         }
     }
 }
-
 @media screen and (max-width: 768px)
 {
     .menu
@@ -161,30 +152,26 @@
         &__marginright {
             margin-right: 0;
         }
-        &__heading1 
-        {
+        &__heading1 {
             font-size: 2.5em;
             & + p {
                 font-size: 1.2em;
             } 
         }         
-        &__heading2
-        {
+        &__heading2 {
             font-size: 1.8em;
             & + p {
                 font-size: 1.2em;
             }
         }   
-        &__heading3
-        {
-            font-size: 1.5em;
+        &__heading3 {
+            font-size: 2.2em;
             & + p {
             font-size: 1.2em;
             } 
         }       
-        &__heading4
-        {
-            font-size: 1.5em;
+        &__heading4 {
+            font-size: 2.2em;
             & + p {
             font-size: 1.2em;
             }
@@ -218,7 +205,7 @@
     text-align: center;
     vertical-align: middle;
     margin: 50px 25% 50px 25%;
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: $color-back;
     text-decoration: none;
 }
@@ -300,7 +287,7 @@ h3
 @media screen and (max-width: 768px)
 {
     .menu1-enchainement {
-        font-size: 1.2em;
+        font-size: 1.3em;
         margin-top: 20px;
         margin-bottom: 15px;
     }
@@ -330,7 +317,7 @@ h3
     .menu1-description
     {
         width: 95%;
-        height: 700px;
+        height: 800px;
         margin-bottom: 50px;
         font-size: 0.7em;
     }
@@ -429,7 +416,7 @@ h3
     width: 80%;
     text-align: center;
     margin-bottom: 100px;
-    height: 900px;
+    height: 800px;
     font-family: 'TT Pubs', Arial, Helvetica, sans-serif;
     font-size: 1.5em;
     background-color: $lightpink;
@@ -439,7 +426,7 @@ h3
     .menu2-description
     {
         width: 95%;
-        height: 1000px;
+        height: 800px;
         font-size: 1em;
     }
 }
@@ -448,9 +435,9 @@ h3
     .menu2-description
     {
         width: 95%;
-        height: 700px;
+        height: 450px;
         margin-bottom: 50px;
-        font-size: 0.7em;
+        font-size: 0.6em;
     }
 }
 .menu2-dish
@@ -543,7 +530,7 @@ h3
     {
         width: 95%;
         height: 1000px;
-        font-size: 1em;
+        font-size: 1.2em;
     }
 }
 @media screen and (max-width: 768px)
@@ -553,7 +540,7 @@ h3
         width: 95%;
         height: 700px;
         margin-bottom: 50px;
-        font-size: 0.7em;
+        font-size: 0.6em;
     }
 }
 .menu3-dish
@@ -642,7 +629,7 @@ h3
         width: 95%;
         height: 700px;
         margin-bottom: 50px;
-        font-size: 0.7em;
+        font-size: 0.5em;
     }
 }
 .menu4-dish
