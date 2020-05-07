@@ -4,18 +4,25 @@
     -webkit-text-fill-color: transparent;
     font-weight: normal;
 }
-
 @mixin menu3{
     background: -webkit-linear-gradient(130deg, #0887fb, #0887fb 35%, #0431df);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: normal;
 }
-
 @mixin menu4{
     background: -webkit-linear-gradient(130deg, #bfff7e, #bfff7e 35%, #3d9339);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: normal;
 }
-
+@mixin description{
+    width: 80%;
+    text-align: center;
+    margin-bottom: 100px;
+}
+@mixin enchainement{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}

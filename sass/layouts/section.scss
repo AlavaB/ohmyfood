@@ -3,6 +3,7 @@
 
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 @media screen and (max-width: 768px)
 {
@@ -15,14 +16,33 @@
 }
 .link
 {
-    width: 50%;
-    text-decoration: none;    
+    width: 40%;
+    text-decoration: none;
+    align-items: center;
+    &__margintop {
+        margin-top: 50px;
+    }
+    &__marginleft {
+        margin-left: 50px;
+    }
+    &__marginright {
+        margin-right: 50px;
+    }    
 }
 @media screen and (max-width: 768px)
 {
     .link
     {
         width: 70%;
+        &__margintop {
+            margin-top: 30px;
+        }
+        &__marginleft {
+            margin-left: 0;
+        }
+        &__marginright {
+            margin-right: 0;
+        }
     }
 }
 .menu
@@ -33,20 +53,10 @@
     text-align: center;
     justify-content: center;
     box-shadow: 2px 2px 24px #ededed;
-    margin: 60px;
-    &__margintop {
-        margin-top: 80px;
-    }
-    &__marginleft {
-        margin-left: 170px;
-    }
-    &__marginright {
-        margin-right: 170px;
-    }
     &__heading1 {
+        font-size: 3.5em;
         font-family: $menu1-font;
-        color: $menu1-color;
-        font-size: 3em;
+        color: $menu1-color;       
         font-weight: normal;
         & + p {
             color: $menu1-color;
@@ -55,19 +65,22 @@
             margin-top: 15px;
         }
     }
-    &__heading2 {
-        font-family: $menu2-font;
-        font-size: 2em;
+    &__heading2 {       
         @include menu2;
+        font-family: $menu2-font;
+        font-size: 3em;
         & + p {
             font-family: 'TT Pubs', Arial, Helvetica, sans-serif;
             color: #d8852e;
             font-size: 4em;
             margin-top: 40px;
         }
+        &--margintop2 {
+        margin-top: 100px;
+        }
     } 
     &__heading3 {
-        font-size: 3em;
+        font-size: 4em;
         font-family: $menu3-font;
         @include menu3;
         & + p {
@@ -76,9 +89,12 @@
             font-size: 4em;
             margin-top: 40px;
         }
+        &--margintop3 {
+            margin-top: 100px;
+            }
     }
     &__heading4 {
-        font-size: 3em;
+        font-size: 4em;
         font-family: $menu4-font;
         @include menu4;      
         & + p {
@@ -87,6 +103,14 @@
             font-size: 4em;
             margin-top: 40px;
         }
+        &--margintop4 {
+            margin-top: 100px;
+            }
+    }
+    &__ending {
+        font-family: $menu1-font;
+        font-size: 2.2em;
+        font-weight: lighter;
     } 
     &--pink {
         background-color: $pink;
@@ -145,13 +169,6 @@
     {
         height: 300px;
         margin: 0%;
-        margin-bottom: 20px;
-        &__marginleft {
-            margin-left: 0;
-        }
-        &__marginright {
-            margin-right: 0;
-        }
         &__heading1 {
             font-size: 2.5em;
             & + p {
@@ -204,7 +221,7 @@
     font-weight: 1000;
     text-align: center;
     vertical-align: middle;
-    margin: 50px 25% 50px 25%;
+    margin: 80px 25% 50px 25%;
     border-radius: 15px;
     background-color: $color-back;
     text-decoration: none;
@@ -223,21 +240,122 @@
         font-size: 1em;
         height: 50px;
         line-height: 50px;
+        margin-top: 50px;
     }
 }
 
 /*****************MENU*************************/
-.menu-presentation
+.menucard
 {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    &__description {
+        @include description;
+        height: 1400px;
+        font-family: $font-menu;
+        font-size: 1.5em;
+        color: #3d1319;
+        &--font2 {
+            font-family: 'TT Pubs', Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+        }
+        &--backcolor1 {
+            background-color: $pink;
+
+        }
+        &--backcolor2 {
+            background-color: $lightpink;
+        }
+        &--backcolor3 {
+            background-color: $lightgrey;
+        }
+        &--backcolor4 {
+            background-color: $lightmagenta;
+        }
+    }
+    &__enchainement1 {
+        font-size: 1.8em;
+        margin-top: 40px;
+        margin-bottom: 25px;
+    }
+    &__enchainement2 {
+        font-size: 1.5em;
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+    &__enchainement {
+        @include enchainement;
+    }
+    &__dish {
+        display: flex;
+        margin-bottom: 15px;
+        &--starter {
+        color: #c67412;
+        }
+        &--maincourse {
+            color: #a56799;
+        }
+        &--desert {
+            color: #6e4ccc;
+        }
+    }
+}
+@media screen and (max-width: 1400px)
+{
+    .menucard
+    {
+        &__enchainement1 {
+            font-size: 1em;
+        }
+        &__enchainement2 {
+        font-size: 1.5em;
+        }
+        &__enchainement {
+        font-size: 1em;
+        }
+        &__description
+        {
+        width: 95%;
+        height: 1500px;
+        font-size: 1.5em;
+        }
+    }
+    
+}
+@media screen and (max-width: 768px)
+{
+    .menucard 
+    {
+        &__enchainement1 {
+        font-size: 1.3em;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        }
+        &__enchainement2 {
+        font-size: 1.2em;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        }
+        &__enchainement {
+        font-size: 1.2em;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        }
+        &__description
+        {
+        width: 95%;
+        height: 800px;
+        margin-bottom: 50px;
+        font-size: 0.7em;
+        }
+    }   
 }
 h3
 {
     font-family: $main-font;
-    font-size: 2.5em;
+    font-size: 3em;
     margin-top: 20px;
 }
 @media screen and (max-width: 1400px)
@@ -252,7 +370,7 @@ h3
 {
     h3
     {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 }
 .musicnote
@@ -272,97 +390,6 @@ h3
         height: 50px;
     }
 }
-.menu1-enchainement
-{
-    font-size: 1.8em;
-    margin-top: 40px;
-    margin-bottom: 25px;
-}
-@media screen and (max-width: 1400px)
-{
-    .menu1-enchainement {
-        font-size: 1.5em;
-    }
-}
-@media screen and (max-width: 768px)
-{
-    .menu1-enchainement {
-        font-size: 1.3em;
-        margin-top: 20px;
-        margin-bottom: 15px;
-    }
-}
-.menu1-description
-{
-    width: 80%;
-    text-align: center;
-    margin-bottom: 100px;
-    height: 1200px;
-    font-family: $font-menu;
-    font-size: 1.3em;
-    color: #3d1319;
-    background-color: $pink;
-}
-@media screen and (max-width: 1400px)
-{
-    .menu1-description
-    {
-        width: 95%;
-        height: 1000px;
-        font-size: 1em;
-    }
-}
-@media screen and (max-width: 768px)
-{
-    .menu1-description
-    {
-        width: 95%;
-        height: 800px;
-        margin-bottom: 50px;
-        font-size: 0.7em;
-    }
-}
-.menu1-dish
-{
-    display: flex;
-    margin-bottom: 10px;
-    &__description {
-        flex: 3.5;
-        text-align: left;
-        margin-left: 130px;
-    }
-    &__price {
-        flex: 0.5;
-        text-align: right;
-        margin-right: 130px;
-    }
-}
-@media screen and (max-width: 1400px)
-{
-    .menu1-dish
-    {
-        &__description {
-            margin-left: 50px;
-        }
-        &__price {          
-            margin-right: 50px;
-        }
-    }   
-}
-@media screen and (max-width: 768px)
-{
-    .menu1-dish
-    {
-        &__description {
-            flex: 3.5;
-            margin-left: 10px;
-        }
-        &__price {
-            flex: 0.5;
-            margin-right: 10px;
-        }
-    }  
-}
 .end-title
 {
     display: flex;
@@ -370,17 +397,17 @@ h3
     align-items: center;
     justify-content: center;
     font-size: 1em;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .musicnote-end
 {
-    height: 80px;
+    height: 70px;
     margin-right: 10px;
 }
 @media screen and (max-width: 1400px)
 {
     .musicnote-end {
-        height: 70px;
+        height: 60px;
     }
 }
 @media screen and (max-width: 768px)
@@ -391,162 +418,10 @@ h3
         margin-right: 10px;
     }
 }
-.menu2-enchainement
-{
-    font-size: 1.5em;
-    margin-top: 50px;
-    margin-bottom: 25px;
-}
-@media screen and (max-width: 1400px)
-{
-    .menu2-enchainement {
-        font-size: 1.5em;
-    }
-}
-@media screen and (max-width: 768px)
-{
-    .menu2-enchainement {
-        font-size: 1.2em;
-        margin-top: 20px;
-        margin-bottom: 15px;
-    }
-}
-.menu2-description
-{
-    width: 80%;
-    text-align: center;
-    margin-bottom: 100px;
-    height: 800px;
-    font-family: 'TT Pubs', Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-    background-color: $lightpink;
-}
-@media screen and (max-width: 1400px)
-{
-    .menu2-description
-    {
-        width: 95%;
-        height: 800px;
-        font-size: 1em;
-    }
-}
-@media screen and (max-width: 768px)
-{
-    .menu2-description
-    {
-        width: 95%;
-        height: 450px;
-        margin-bottom: 50px;
-        font-size: 0.6em;
-    }
-}
-.menu2-dish
-{
-    display: flex;
-    margin-bottom: 20px;
-    &__description {
-        flex: 3;
-        text-align: left;
-        margin-left: 150px;
-    }
-    &__price {
-        flex: 1;
-        text-align: right;
-        margin-right: 150px;
-    }
-    
-}
-@media screen and (max-width: 1400px)
-{
-    .menu2-dish
-    {
-        &__description {
-            margin-left: 50px;
-        }
-        &__price {          
-            margin-right: 50px;
-        }
-    }   
-}
-@media screen and (max-width: 768px)
-{
-    .menu2-dish
-    {
-        &__description {
-            flex: 3.5;
-            margin-left: 10px;
-        }
-        &__price {
-            flex: 0.5;
-            margin-right: 10px;
-        }
-    }  
-}
+
+
 .dish
 {
-    &__starter {
-        color: #c67412;
-    }
-    &__maincourse {
-        color: #a56799;
-    }
-    &__desert {
-        color: #6e4ccc;
-    }
-}
-
-.menu3-enchainement
-{
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    margin-top: 50px;
-}
-@media screen and (max-width: 1400px)
-{
-    .menu3-enchainement {
-        font-size: 1.5em;
-    }
-}
-@media screen and (max-width: 768px)
-{
-    .menu3-enchainement {
-        font-size: 1.2em;
-        margin-top: 20px;
-        margin-bottom: 15px;
-    }
-}
-.menu3-description
-{
-    width: 80%;
-    text-align: center;
-    margin-bottom: 100px;
-    height: 900px;
-    font-family: $font-menu;
-    background-color: $lightgrey;
-}
-@media screen and (max-width: 1400px)
-{
-    .menu3-description
-    {
-        width: 95%;
-        height: 1000px;
-        font-size: 1.2em;
-    }
-}
-@media screen and (max-width: 768px)
-{
-    .menu3-description
-    {
-        width: 95%;
-        height: 700px;
-        margin-bottom: 50px;
-        font-size: 0.6em;
-    }
-}
-.menu3-dish
-{
-    display: flex;
-    margin-bottom: 15px;
     &__description {
         flex: 3;
         text-align: left;
@@ -560,7 +435,7 @@ h3
 }
 @media screen and (max-width: 1400px)
 {
-    .menu3-dish
+    .dish
     {
         &__description {
             margin-left: 50px;
@@ -572,7 +447,7 @@ h3
 }
 @media screen and (max-width: 768px)
 {
-    .menu3-dish
+    .dish
     {
         &__description {
             flex: 3.5;
@@ -584,93 +459,3 @@ h3
         }
     }  
 }
-.menu4-enchainement
-{
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    margin-top: 50px;
-}
-@media screen and (max-width: 1400px)
-{
-    .menu4-enchainement {
-        font-size: 1.5em;
-    }
-}
-@media screen and (max-width: 768px)
-{
-    .menu4-enchainement {
-        font-size: 1.2em;
-        margin-top: 20px;
-        margin-bottom: 15px;
-    }
-}
-.menu4-description
-{
-    width: 80%;
-    text-align: center;
-    margin-bottom: 100px;
-    height: 900px;
-    font-family: $font-menu;
-    background-color: $lightmagenta;
-}
-@media screen and (max-width: 1400px)
-{
-    .menu4-description
-    {
-        width: 95%;
-        height: 1000px;
-        font-size: 1em;
-    }
-}
-@media screen and (max-width: 768px)
-{
-    .menu4-description
-    {
-        width: 95%;
-        height: 700px;
-        margin-bottom: 50px;
-        font-size: 0.5em;
-    }
-}
-.menu4-dish
-{
-    display: flex;
-    margin-bottom: 15px;
-    &__description {
-        flex: 3;
-        text-align: left;
-        margin-left: 150px;
-    }
-    &__price {
-        flex: 1;
-        text-align: right;
-        margin-right: 150px;
-    }
-}
-@media screen and (max-width: 1400px)
-{
-    .menu4-dish
-    {
-        &__description {
-            margin-left: 50px;
-        }
-        &__price {          
-            margin-right: 50px;
-        }
-    }   
-}
-@media screen and (max-width: 768px)
-{
-    .menu4-dish
-    {
-        &__description {
-            flex: 3.5;
-            margin-left: 10px;
-        }
-        &__price {
-            flex: 0.5;
-            margin-right: 10px;
-        }
-    }  
-}
-
