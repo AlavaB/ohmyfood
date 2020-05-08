@@ -75,8 +75,9 @@
             font-size: 4em;
             margin-top: 40px;
         }
-        &--margintop2 {
-        margin-top: 100px;
+        &--menucard2 {
+            font-size: 2.3em;
+            @include margin-heading;
         }
     } 
     &__heading3 {
@@ -89,8 +90,9 @@
             font-size: 4em;
             margin-top: 40px;
         }
-        &--margintop3 {
-            margin-top: 100px;
+        &--menucard3 {
+            font-size: 4.5em;
+            @include margin-heading;
             }
     }
     &__heading4 {
@@ -103,8 +105,9 @@
             font-size: 4em;
             margin-top: 40px;
         }
-        &--margintop4 {
-            margin-top: 100px;
+        &--menucard4 {
+            font-size: 4.5em;
+            @include margin-heading;
             }
     }
     &__ending {
@@ -176,21 +179,21 @@
             } 
         }         
         &__heading2 {
-            font-size: 1.8em;
+            font-size: 1.5em;
             & + p {
-                font-size: 1.2em;
+                font-size: 1.3em;
             }
         }   
         &__heading3 {
-            font-size: 2.2em;
+            font-size: 2em;
             & + p {
-            font-size: 1.2em;
+                font-size: 1.3em;
             } 
         }       
         &__heading4 {
-            font-size: 2.2em;
+            font-size: 2em;
             & + p {
-            font-size: 1.2em;
+                font-size: 1.3em;
             }
         }
     }   
@@ -253,17 +256,16 @@
     align-items: center;
     &__description {
         @include description;
-        height: 1400px;
-        font-family: $font-menu;
-        font-size: 1.5em;
+        height: 1600px;
+        font-family: $menu-text;
+        font-size: 1.4em;
         color: #3d1319;
         &--font2 {
-            font-family: 'TT Pubs', Arial, Helvetica, sans-serif;
+            font-family: 'TT Pubs medium', Arial, Helvetica, sans-serif;
             font-size: 1.5em;
         }
         &--backcolor1 {
             background-color: $pink;
-
         }
         &--backcolor2 {
             background-color: $lightpink;
@@ -279,14 +281,12 @@
         flex: 0.7;
         width: 30%;
         font-size: 1.3em;
-        font-weight: 800;
-        margin-top: 40px;
-        margin-bottom: 50px;
+        font-family: $font-menu;
     }
     &__enchainement2 {
+        flex: 0.8;
+        width: 30%;
         font-size: 1.5em;
-        margin-top: 50px;
-        margin-bottom: 25px;
     }
     &__enchainement {
         @include enchainement;
@@ -295,7 +295,7 @@
         display: flex;
         margin-bottom: 15px;
         &--starter {
-        color: #c67412;
+            color: #c67412;
         }
         &--maincourse {
             color: #a56799;
@@ -310,19 +310,19 @@
     .menucard
     {
         &__enchainement1 {
-            font-size: 1em;
+            font-size: 1.2em;
         }
         &__enchainement2 {
-        font-size: 1.5em;
+            font-size: 1.5em;
         }
         &__enchainement {
-        font-size: 1em;
+            font-size: 1em;
         }
         &__description
         {
-        width: 95%;
-        height: 1500px;
-        font-size: 1.5em;
+            width: 95%;
+            height: 1400px;
+            font-size: 1.1em;
         }
     }
     
@@ -332,26 +332,27 @@
     .menucard 
     {
         &__enchainement1 {
-        font-size: 1.3em;
-        margin-top: 20px;
-        margin-bottom: 15px;
+            flex: 0.9;
+            font-size: 1.3em;
         }
         &__enchainement2 {
-        font-size: 1.2em;
-        margin-top: 20px;
-        margin-bottom: 15px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 15px;
         }
         &__enchainement {
-        font-size: 1.2em;
-        margin-top: 20px;
-        margin-bottom: 15px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 15px;
         }
-        &__description
-        {
-        width: 95%;
-        height: 800px;
-        margin-bottom: 50px;
-        font-size: 0.7em;
+        &__description {
+            width: 95%;
+            height: 750px;
+            margin-bottom: 50px;
+            font-size: 0.7em;
+        }
+        &__dish {
+            margin-bottom: 5px;
         }
     }   
 }
@@ -391,6 +392,7 @@ h3
 {
     .musicnote {
         height: 50px;
+        margin-top: 5px;
     }
 }
 .end-title
@@ -401,6 +403,13 @@ h3
     justify-content: center;
     font-size: 1em;
     margin-top: 50px;
+}
+@media screen and (max-width: 768px)
+{
+    .end-title
+    {
+        margin-top: 20px;
+    }
 }
 .musicnote-end
 {
@@ -426,12 +435,12 @@ h3
     &__description {
         flex: 3;
         text-align: left;
-        margin-left: 150px;
+        margin-left: 140px;
     }
     &__price {
-        flex: 1;
+        flex: 0.5;
         text-align: right;
-        margin-right: 150px;
+        margin-right: 140px;
     }
 }
 @media screen and (max-width: 1400px)
@@ -451,7 +460,7 @@ h3
     .dish
     {
         &__description {
-            flex: 3.5;
+            flex: 3;
             margin-left: 10px;
         }
         &__price {
@@ -460,26 +469,97 @@ h3
         }
     }  
 }
-
 .separation-line
 {
     display: flex;
     height: 100px;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
     &__line {
         width: 100%;
         max-height: 15px;
         justify-content: flex-start;
     }
 }  
+@media screen and (max-width: 768px)
+{
+    .separation-line
+    {
+        height: 30px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
 .lineleft
 {
     flex: 1;
-    margin-left: 150px;
+    margin-left: 140px;
+    &--menu2 {
+        flex: 1;
+        margin-left: 50px;
+        padding-top: 10px;
+    }
+    &--menu3 {
+        flex: 0.6;
+        margin-left: 60px;
+        padding-top: 10px;
+    }
+    &--menu4 {
+        flex: 0.8;
+        margin-left: 50px;
+        padding-top: 10px;
+    }
+}
+@media screen and (max-width: 1400px)
+{
+    .lineleft 
+    {
+        margin-left: 50px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .lineleft
+    {
+        flex: 0.7;
+        margin-left: 10px;
+    }
 }
 .lineright
 {
     flex: 1;
-    margin-right: 150px;
+    margin-right: 140px;
+    &--menu2 {
+        flex: 1;
+        margin-right: 50px;
+        padding-top: 10px;
+    } 
+    &--menu3 {
+        flex: 0.6;
+        margin-right: 60px;
+        padding-top: 10px;
+    }   
+    &--menu4 {
+        flex: 0.8;
+        margin-right: 50px;
+        padding-top: 10px;
+    }
+}
+@media screen and (max-width: 1400px)
+{
+    .lineright
+    {
+        margin-right: 50px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .lineright
+    {
+        flex: 0.7;
+        margin-right: 10px;
+    }
 }

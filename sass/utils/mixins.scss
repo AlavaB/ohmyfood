@@ -3,6 +3,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: normal;
+    
 }
 @mixin menu3{
     background: -webkit-linear-gradient(130deg, #0887fb, #0887fb 35%, #0431df);
@@ -23,6 +24,9 @@
 }
 @mixin enchainement{
     font-size: 1.5em;
-    margin-bottom: 20px;
-    margin-top: 50px;
+    flex: 0.7;
+}
+@mixin margin-heading{
+    margin-top: 120px;
+    margin-bottom: 130px;
 }

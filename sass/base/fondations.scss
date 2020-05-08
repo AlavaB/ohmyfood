@@ -13,31 +13,13 @@ p
     margin-bottom: 0;
 }
 
-@font-face /*Logo font*/
+@font-face /*Main font*/
 {
     font-family: 'montserratbold';
     src: url('../font/montserrat-bold-webfont.woff2') format('woff2'),
          url('../font/montserrat-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
-@font-face /*Main font*/
-{
-    font-family: 'montserratregular';
-    src: url('../font/montserrat-regular-webfont.woff2') format('woff2'),
-         url('../font/montserrat-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face /*Font menu 1*/
-{
-    font-family: 'devonshireregular';
-    src: url('../font/devonshire-regular-webfont.woff2') format('woff2'),
-         url('../font/devonshire-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
 }
 @font-face /*Font "Menu" menu 1 + 3 + 4*/
 {
@@ -47,16 +29,7 @@ p
     font-weight: bold;
     font-style: normal;
 }
-@font-face /*Police menu 2*/
-{
-    font-family: 'croissant_oneregular';
-    src: url('../font/croissantone-regular-webfont.woff2') format('woff2'),
-         url('../font/croissantone-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face /*Police "Menu" menu 2*/
+@font-face /*Font "Menu" menu 2*/
 {
     font-family: 'TT Pubs';
     src: url('../font/TTPubs-Bold.woff2') format('woff2'),
@@ -65,7 +38,31 @@ p
     font-weight: 700;
     font-style: normal;
 }
-@font-face /*Police menu 3*/
+@font-face /*Font title menu 1*/
+{
+    font-family: 'devonshireregular';
+    src: url('../font/devonshire-regular-webfont.woff2') format('woff2'),
+         url('../font/devonshire-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face /*Font menu 1 + 3 + 4*/
+{
+    font-family: 'SegoePrint';
+    src: url('../font/SegoePrint.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face /*Font title menu 2*/
+{
+    font-family: 'croissant_oneregular';
+    src: url('../font/croissantone-regular-webfont.woff2') format('woff2'),
+         url('../font/croissantone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face /*Font title menu 3*/
 {
     font-family: 'dancing_scriptregular';
     src: url('../font/dancingscript-variablefont_wght-webfont.woff2') format('woff2'),
@@ -73,13 +70,20 @@ p
     font-weight: normal;
     font-style: normal;
 }
-@font-face /*Police menu 4*/
+@font-face /*Font title menu 4*/
 {
     font-family: 'kaushan_scriptregular';
     src: url('../font/kaushanscript-regular-webfont.woff2') format('woff2'),
          url('../font/kaushanscript-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
+@font-face /*Font menu 2*/
+{
+    font-family: 'TT Pubs medium';
+    src: url('../font/TTPubs-Medium.woff2') format('woff2'),
+        url('../font/TTPubs-Medium.woff') format('woff'),
+        url('../font/TTPubs-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }

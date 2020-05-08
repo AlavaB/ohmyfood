@@ -1,3 +1,10 @@
+/*Main font*/
+/*Font title menu 1*/
+/*Font "Menu" menu 1 + 3 + 4*/
+/*Font title menu 2*/
+/*Font title menu 3*/
+/*Font title menu 4*/
+/*Font text menu 1 + 3 + 4*/
 body {
   margin: 0;
 }
@@ -19,9 +26,15 @@ p {
   font-style: normal;
 }
 @font-face {
-  font-family: "montserratregular";
-  src: url("../font/montserrat-regular-webfont.woff2") format("woff2"), url("../font/montserrat-regular-webfont.woff") format("woff");
-  font-weight: normal;
+  font-family: "Segoe Print";
+  src: url("../font/SegoePrint-Bold.woff2") format("woff2"), url("../font/SegoePrint-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Pubs";
+  src: url("../font/TTPubs-Bold.woff2") format("woff2"), url("../font/TTPubs-Bold.woff") format("woff"), url("../font/TTPubs-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
@@ -31,21 +44,15 @@ p {
   font-style: normal;
 }
 @font-face {
-  font-family: "Segoe Print";
-  src: url("../font/SegoePrint-Bold.woff2") format("woff2"), url("../font/SegoePrint-Bold.woff") format("woff");
-  font-weight: bold;
+  font-family: "SegoePrint";
+  src: url("../font/SegoePrint.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "croissant_oneregular";
   src: url("../font/croissantone-regular-webfont.woff2") format("woff2"), url("../font/croissantone-regular-webfont.woff") format("woff");
   font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "TT Pubs";
-  src: url("../font/TTPubs-Bold.woff2") format("woff2"), url("../font/TTPubs-Bold.woff") format("woff"), url("../font/TTPubs-Bold.ttf") format("truetype");
-  font-weight: 700;
   font-style: normal;
 }
 @font-face {
@@ -58,6 +65,12 @@ p {
   font-family: "kaushan_scriptregular";
   src: url("../font/kaushanscript-regular-webfont.woff2") format("woff2"), url("../font/kaushanscript-regular-webfont.woff") format("woff");
   font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Pubs medium";
+  src: url("../font/TTPubs-Medium.woff2") format("woff2"), url("../font/TTPubs-Medium.woff") format("woff"), url("../font/TTPubs-Medium.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
 }
 header {
@@ -179,8 +192,10 @@ h1 {
   font-size: 4em;
   margin-top: 40px;
 }
-.menu__heading2--margintop2 {
-  margin-top: 100px;
+.menu__heading2--menucard2 {
+  font-size: 2.3em;
+  margin-top: 120px;
+  margin-bottom: 130px;
 }
 .menu__heading3 {
   font-size: 4em;
@@ -196,8 +211,10 @@ h1 {
   font-size: 4em;
   margin-top: 40px;
 }
-.menu__heading3--margintop3 {
-  margin-top: 100px;
+.menu__heading3--menucard3 {
+  font-size: 4.5em;
+  margin-top: 120px;
+  margin-bottom: 130px;
 }
 .menu__heading4 {
   font-size: 4em;
@@ -213,8 +230,10 @@ h1 {
   font-size: 4em;
   margin-top: 40px;
 }
-.menu__heading4--margintop4 {
-  margin-top: 100px;
+.menu__heading4--menucard4 {
+  font-size: 4.5em;
+  margin-top: 120px;
+  margin-bottom: 130px;
 }
 .menu__ending {
   font-family: "devonshireregular", Arial, Helvetica, sans-serif;
@@ -282,22 +301,22 @@ h1 {
     font-size: 1.2em;
   }
   .menu__heading2 {
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
   .menu__heading2 + p {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
   .menu__heading3 {
-    font-size: 2.2em;
+    font-size: 2em;
   }
   .menu__heading3 + p {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
   .menu__heading4 {
-    font-size: 2.2em;
+    font-size: 2em;
   }
   .menu__heading4 + p {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
 }
 @media screen and (max-width: 1400px) {
@@ -350,13 +369,13 @@ h1 {
   width: 80%;
   text-align: center;
   margin-bottom: 100px;
-  height: 1400px;
-  font-family: "Segoe Print", Arial, Helvetica, sans-serif;
-  font-size: 1.5em;
+  height: 1600px;
+  font-family: "SegoePrint", Arial, Helvetica, sans-serif;
+  font-size: 1.4em;
   color: #3d1319;
 }
 .menucard__description--font2 {
-  font-family: "TT Pubs", Arial, Helvetica, sans-serif;
+  font-family: "TT Pubs medium", Arial, Helvetica, sans-serif;
   font-size: 1.5em;
 }
 .menucard__description--backcolor1 {
@@ -375,19 +394,16 @@ h1 {
   flex: 0.7;
   width: 30%;
   font-size: 1.3em;
-  font-weight: 800;
-  margin-top: 40px;
-  margin-bottom: 50px;
+  font-family: "Segoe Print", Arial, Helvetica, sans-serif;
 }
 .menucard__enchainement2 {
+  flex: 0.8;
+  width: 30%;
   font-size: 1.5em;
-  margin-top: 50px;
-  margin-bottom: 25px;
 }
 .menucard__enchainement {
   font-size: 1.5em;
-  margin-bottom: 20px;
-  margin-top: 50px;
+  flex: 0.7;
 }
 .menucard__dish {
   display: flex;
@@ -405,7 +421,7 @@ h1 {
 
 @media screen and (max-width: 1400px) {
   .menucard__enchainement1 {
-    font-size: 1em;
+    font-size: 1.2em;
   }
   .menucard__enchainement2 {
     font-size: 1.5em;
@@ -415,15 +431,14 @@ h1 {
   }
   .menucard__description {
     width: 95%;
-    height: 1500px;
-    font-size: 1.5em;
+    height: 1400px;
+    font-size: 1.1em;
   }
 }
 @media screen and (max-width: 768px) {
   .menucard__enchainement1 {
+    flex: 0.9;
     font-size: 1.3em;
-    margin-top: 20px;
-    margin-bottom: 15px;
   }
   .menucard__enchainement2 {
     font-size: 1.2em;
@@ -437,9 +452,12 @@ h1 {
   }
   .menucard__description {
     width: 95%;
-    height: 800px;
+    height: 750px;
     margin-bottom: 50px;
     font-size: 0.7em;
+  }
+  .menucard__dish {
+    margin-bottom: 5px;
   }
 }
 h3 {
@@ -471,6 +489,7 @@ h3 {
 @media screen and (max-width: 768px) {
   .musicnote {
     height: 50px;
+    margin-top: 5px;
   }
 }
 .end-title {
@@ -482,6 +501,11 @@ h3 {
   margin-top: 50px;
 }
 
+@media screen and (max-width: 768px) {
+  .end-title {
+    margin-top: 20px;
+  }
+}
 .musicnote-end {
   height: 70px;
   margin-right: 10px;
@@ -501,12 +525,12 @@ h3 {
 .dish__description {
   flex: 3;
   text-align: left;
-  margin-left: 150px;
+  margin-left: 140px;
 }
 .dish__price {
-  flex: 1;
+  flex: 0.5;
   text-align: right;
-  margin-right: 150px;
+  margin-right: 140px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -519,7 +543,7 @@ h3 {
 }
 @media screen and (max-width: 768px) {
   .dish__description {
-    flex: 3.5;
+    flex: 3;
     margin-left: 10px;
   }
   .dish__price {
@@ -532,6 +556,8 @@ h3 {
   height: 100px;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 .separation-line__line {
   width: 100%;
@@ -539,16 +565,75 @@ h3 {
   justify-content: flex-start;
 }
 
+@media screen and (max-width: 768px) {
+  .separation-line {
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
 .lineleft {
   flex: 1;
-  margin-left: 150px;
+  margin-left: 140px;
+}
+.lineleft--menu2 {
+  flex: 1;
+  margin-left: 50px;
+  padding-top: 10px;
+}
+.lineleft--menu3 {
+  flex: 0.6;
+  margin-left: 60px;
+  padding-top: 10px;
+}
+.lineleft--menu4 {
+  flex: 0.8;
+  margin-left: 50px;
+  padding-top: 10px;
 }
 
+@media screen and (max-width: 1400px) {
+  .lineleft {
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lineleft {
+    flex: 0.7;
+    margin-left: 10px;
+  }
+}
 .lineright {
   flex: 1;
-  margin-right: 150px;
+  margin-right: 140px;
+}
+.lineright--menu2 {
+  flex: 1;
+  margin-right: 50px;
+  padding-top: 10px;
+}
+.lineright--menu3 {
+  flex: 0.6;
+  margin-right: 60px;
+  padding-top: 10px;
+}
+.lineright--menu4 {
+  flex: 0.8;
+  margin-right: 50px;
+  padding-top: 10px;
 }
 
+@media screen and (max-width: 1400px) {
+  .lineright {
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lineright {
+    flex: 0.7;
+    margin-right: 10px;
+  }
+}
 .footblock {
   position: sticky;
   bottom: 0;
