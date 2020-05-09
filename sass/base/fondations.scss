@@ -29,15 +29,6 @@ p
     font-weight: bold;
     font-style: normal;
 }
-@font-face /*Font "Menu" menu 2*/
-{
-    font-family: 'TT Pubs';
-    src: url('../font/TTPubs-Bold.woff2') format('woff2'),
-         url('../font/TTPubs-Bold.woff') format('woff'),
-         url('../font/TTPubs-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
 @font-face /*Font title menu 1*/
 {
     font-family: 'devonshireregular';
@@ -78,12 +69,11 @@ p
     font-weight: normal;
     font-style: normal;
 }
-@font-face /*Font menu 2*/
+@font-face /*Font "Menu" + menu 2*/
 {
-    font-family: 'TT Pubs medium';
-    src: url('../font/TTPubs-Medium.woff2') format('woff2'),
-        url('../font/TTPubs-Medium.woff') format('woff'),
-        url('../font/TTPubs-Medium.ttf') format('truetype');
-    font-weight: 500;
+    font-family: 'Leo';
+    src: url('../font/Leo.woff2') format('woff2'),
+        url('../font/Leo.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
-  }
+}

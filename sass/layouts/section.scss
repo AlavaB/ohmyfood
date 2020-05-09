@@ -70,7 +70,7 @@
         font-family: $menu2-font;
         font-size: 3em;
         & + p {
-            font-family: 'TT Pubs', Arial, Helvetica, sans-serif;
+            font-family: 'Leo', Arial, Helvetica, sans-serif;
             color: #d8852e;
             font-size: 4em;
             margin-top: 40px;
@@ -273,7 +273,7 @@
         font-size: 1.4em;
         color: #3d1319;
         &--font2 {
-            font-family: 'TT Pubs medium', Arial, Helvetica, sans-serif;
+            font-family: 'Leo', Arial, Helvetica, sans-serif;
             font-size: 1.5em;
         }
         &--backcolor1 {
@@ -298,7 +298,9 @@
     &__enchainement2 {
         flex: 0.8;
         width: 30%;
-        font-size: 1.5em;
+        font-size: 1.4em;
+        font-weight: bold;
+        letter-spacing: 0.04em;
     }
     &__enchainement {
         @include enchainement;
@@ -308,12 +310,15 @@
         margin-bottom: 15px;
         &--starter {
             color: #c67412;
+            height: 40px;
         }
         &--maincourse {
             color: #a56799;
+            height: 40px;
         }
         &--desert {
             color: #6e4ccc;
+            height: 40px;
         }
     }
 }

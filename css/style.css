@@ -32,12 +32,6 @@ p {
   font-style: normal;
 }
 @font-face {
-  font-family: "TT Pubs";
-  src: url("../font/TTPubs-Bold.woff2") format("woff2"), url("../font/TTPubs-Bold.woff") format("woff"), url("../font/TTPubs-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
   font-family: "devonshireregular";
   src: url("../font/devonshire-regular-webfont.woff2") format("woff2"), url("../font/devonshire-regular-webfont.woff") format("woff");
   font-weight: normal;
@@ -68,9 +62,9 @@ p {
   font-style: normal;
 }
 @font-face {
-  font-family: "TT Pubs medium";
-  src: url("../font/TTPubs-Medium.woff2") format("woff2"), url("../font/TTPubs-Medium.woff") format("woff"), url("../font/TTPubs-Medium.ttf") format("truetype");
-  font-weight: 500;
+  font-family: "Leo";
+  src: url("../font/Leo.woff2") format("woff2"), url("../font/Leo.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
 }
 header {
@@ -187,7 +181,7 @@ h1 {
   font-size: 3em;
 }
 .menu__heading2 + p {
-  font-family: "TT Pubs", Arial, Helvetica, sans-serif;
+  font-family: "Leo", Arial, Helvetica, sans-serif;
   color: #d8852e;
   font-size: 4em;
   margin-top: 40px;
@@ -387,7 +381,7 @@ h1 {
   color: #3d1319;
 }
 .menucard__description--font2 {
-  font-family: "TT Pubs medium", Arial, Helvetica, sans-serif;
+  font-family: "Leo", Arial, Helvetica, sans-serif;
   font-size: 1.5em;
 }
 .menucard__description--backcolor1 {
@@ -411,7 +405,9 @@ h1 {
 .menucard__enchainement2 {
   flex: 0.8;
   width: 30%;
-  font-size: 1.5em;
+  font-size: 1.4em;
+  font-weight: bold;
+  letter-spacing: 0.04em;
 }
 .menucard__enchainement {
   font-size: 1.5em;
@@ -423,12 +419,15 @@ h1 {
 }
 .menucard__dish--starter {
   color: #c67412;
+  height: 40px;
 }
 .menucard__dish--maincourse {
   color: #a56799;
+  height: 40px;
 }
 .menucard__dish--desert {
   color: #6e4ccc;
+  height: 40px;
 }
 
 @media screen and (max-width: 1400px) {
