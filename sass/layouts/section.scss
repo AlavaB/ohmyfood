@@ -183,17 +183,29 @@
             & + p {
                 font-size: 1.3em;
             }
+            &--menucard2 {
+                margin-top: 50px;
+                margin-bottom: 60px;
+            }
         }   
         &__heading3 {
             font-size: 2em;
             & + p {
                 font-size: 1.3em;
             } 
+            &--menucard3 {
+                margin-top: 50px;
+                margin-bottom: 60px;
+            }
         }       
         &__heading4 {
             font-size: 2em;
             & + p {
                 font-size: 1.3em;
+            }
+            &--menucard4 {
+                margin-top: 50px;
+                margin-bottom: 60px;
             }
         }
     }   
@@ -313,9 +325,11 @@
             font-size: 1.2em;
         }
         &__enchainement2 {
+            flex: 1;
             font-size: 1.5em;
         }
         &__enchainement {
+            flex: 1;
             font-size: 1em;
         }
         &__description
@@ -341,7 +355,8 @@
             margin-bottom: 15px;
         }
         &__enchainement {
-            font-size: 1.2em;
+            flex: 1;
+            font-size: 1.1em;
             margin-top: 20px;
             margin-bottom: 15px;
         }
@@ -353,6 +368,15 @@
         }
         &__dish {
             margin-bottom: 5px;
+            &--starter {
+                height: 20px;
+            }
+            &--maincourse {
+                height: 20px;
+            }
+            &--desert {
+                height: 20px;
+            }
         }
     }   
 }
@@ -408,7 +432,7 @@ h3
 {
     .end-title
     {
-        margin-top: 20px;
+        margin-top: 10px;
     }
 }
 .musicnote-end
@@ -426,7 +450,7 @@ h3
 {
     .musicnote-end
     {
-        height: 50px;
+        height: 40px;
         margin-right: 10px;
     }
 }
@@ -489,8 +513,8 @@ h3
     .separation-line
     {
         height: 30px;
-        margin-top: 20px;
-        margin-bottom: 10px;
+        margin-top: 30px;
+        margin-bottom: 20px;
     }
 }
 .lineleft
@@ -518,14 +542,39 @@ h3
     .lineleft 
     {
         margin-left: 50px;
+        &--menu2 {
+            flex: 0.8;
+            margin-left: 20px;
+        }
+        &--menu3 {
+            flex: 1;
+            margin-left: 20px;
+        }
+        &--menu4 {
+            flex: 1.4;
+            margin-left: 20px;
+        }
     }
 }
+
 @media screen and (max-width: 768px)
 {
     .lineleft
     {
         flex: 0.7;
         margin-left: 10px;
+        &--menu2 {
+            flex: 0.6;
+            margin-left: 10px;
+        }
+        &--menu3 {
+            flex: 0.7;
+            margin-left: 5px;
+        }
+        &--menu4 {
+            flex: 0.7;
+            margin-left: 5px;
+        }
     }
 }
 .lineright
@@ -553,6 +602,18 @@ h3
     .lineright
     {
         margin-right: 50px;
+        &--menu2 {
+            flex: 0.8;
+            margin-right: 20px;
+        }
+        &--menu3 {
+            flex: 1;
+            margin-right: 20px;
+        }
+        &--menu4 {
+            flex: 1.4;
+            margin-right: 20px;
+        }
     }
 }
 @media screen and (max-width: 768px)
@@ -561,5 +622,17 @@ h3
     {
         flex: 0.7;
         margin-right: 10px;
+        &--menu2 {
+            flex: 0.6;
+            margin-right: 10px;
+        }
+        &--menu3 {
+            flex: 0.7;
+            margin-right: 5px;
+        }
+        &--menu4 {
+            flex: 0.7;
+            margin-right: 5px;
+        }
     }
 }
