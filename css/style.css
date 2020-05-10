@@ -69,18 +69,29 @@ p {
 }
 @keyframes animated-dots {
   0% {
-    transform: scaleX(1);
-    opacity: 0.1;
+    opacity: 0;
   }
-  30% {
-    transform: scaleX(1.2);
-  }
-  60% {
-    transform: scaleX(1.5);
-    opacity: 1;
+  50% {
+    opacity: 0.5;
   }
   100% {
-    transform: scaleX(1.7);
+    opacity: 1;
+  }
+}
+@keyframes wiggle2 {
+  25% {
+    transform: translate(-4%);
+  }
+  75% {
+    transform: translate(-4%);
+  }
+}
+@keyframes underline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
   }
 }
 header {
@@ -353,38 +364,53 @@ h1 {
 }
 .comingsoon {
   display: flex;
-  width: 50%;
+  flex: 0.6;
+  justify-content: center;
   height: 100px;
   line-height: 100px;
   color: #fdcb46;
-  justify-content: space-around;
-  vertical-align: middle;
   margin: 80px 25% 50px 25%;
   border-radius: 15px;
   background-color: #579c87;
-  animation: animated-dots 200ms;
 }
 .comingsoon__text {
   font-family: "montserratbold", Arial, Helvetica, sans-serif;
   font-size: 2.5em;
   font-weight: 1000;
   text-decoration: none;
+  margin-right: 0.6em;
 }
-.comingsoon__animated-dots {
-  font-size: 5em;
+.comingsoon__dots {
+  font-size: 2.5em;
+  letter-spacing: 0.2em;
+}
+
+.one {
+  opacity: 0;
+  animation: animated-dots 1200ms 0s linear infinite none;
+}
+
+.two {
+  opacity: 0;
+  animation: animated-dots 1200ms 0.3s linear infinite none;
+}
+
+.three {
+  opacity: 0;
+  animation: animated-dots 1200ms 0.5s linear infinite none;
 }
 
 @media screen and (max-width: 1400px) {
   .comingsoon {
+    flex: 0.8;
+  }
+  .comingsoon__text {
     font-size: 2em;
   }
 }
 @media screen and (max-width: 768px) {
-  .comingsoon {
+  .comingsoon__text {
     font-size: 1em;
-    height: 50px;
-    line-height: 50px;
-    margin-top: 50px;
   }
 }
 /*****************MENU*************************/
@@ -420,21 +446,26 @@ h1 {
   background-color: #fff5fe;
 }
 .menucard__enchainement1 {
-  flex: 0.7;
-  width: 30%;
   font-size: 1.3em;
   font-family: "Segoe Print", Arial, Helvetica, sans-serif;
 }
+.menucard__enchainement1:hover + .underline__line {
+  background-color: #3d1319;
+  transform-origin: left;
+  animation: underline 500ms 150ms both;
+}
 .menucard__enchainement2 {
-  flex: 0.8;
-  width: 30%;
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: bold;
   letter-spacing: 0.04em;
 }
 .menucard__enchainement {
   font-size: 1.5em;
-  flex: 0.7;
+}
+.menucard__enchainement:hover + .underline__line {
+  background-color: #3d1319;
+  transform-origin: left;
+  animation: underline 500ms 150ms both;
 }
 .menucard__dish {
   display: flex;
@@ -444,13 +475,28 @@ h1 {
   color: #c67412;
   height: 40px;
 }
+.menucard__dish--starter:hover + .underline__line {
+  background-color: #c67412;
+  transform-origin: left;
+  animation: underline 500ms 150ms both;
+}
 .menucard__dish--maincourse {
   color: #a56799;
   height: 40px;
 }
+.menucard__dish--maincourse:hover + .underline__line {
+  background-color: #a56799;
+  transform-origin: left;
+  animation: underline 500ms 150ms both;
+}
 .menucard__dish--desert {
   color: #6e4ccc;
   height: 40px;
+}
+.menucard__dish--desert:hover + .underline__line {
+  background-color: #6e4ccc;
+  transform-origin: left;
+  animation: underline 500ms 150ms both;
 }
 
 @media screen and (max-width: 1400px) {
@@ -599,7 +645,7 @@ h3 {
 }
 .separation-line {
   display: flex;
-  height: 50px;
+  height: 100px;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
@@ -618,12 +664,24 @@ h3 {
     margin-bottom: 20px;
   }
 }
+.flex {
+  flex: 0.7;
+}
+
+.underline-size {
+  display: inline-block;
+}
+
 .underline {
-  width: 10%;
-  height: 10px;
-  background-color: #3d1319;
-  margin-top: -15px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+}
+.underline__line {
+  width: 100%;
+  height: 5px;
+  border-radius: 30%;
+  justify-content: center;
 }
 
 .lineleft {
@@ -780,30 +838,13 @@ h3 {
   }
 }
 .wiggle:hover {
-  animation: wiggle 100ms cubic-bezier(0.82, 0.11, 0.19, 0.93);
-  animation-iteration-count: 3;
+  animation: wiggle 100ms cubic-bezier(0.35, 0.6, 0.65, 0.34);
+  animation-iteration-count: 2;
 }
 
 .wiggle2:hover {
-  animation: wiggle2 100ms cubic-bezier(0.82, 0.11, 0.19, 0.93);
-  animation-iteration-count: 3;
-}
-
-@keyframes wiggle {
-  25% {
-    transform: translate(3%);
-  }
-  75% {
-    transform: translate(3%);
-  }
-}
-@keyframes wiggle2 {
-  25% {
-    transform: translate(-3%);
-  }
-  75% {
-    transform: translate(-3%);
-  }
+  animation: wiggle2 100ms cubic-bezier(0.35, 0.6, 0.65, 0.34);
+  animation-iteration-count: 2;
 }
 
 /*# sourceMappingURL=style.css.map */

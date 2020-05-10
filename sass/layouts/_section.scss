@@ -228,43 +228,57 @@
 .comingsoon 
 {
     display: flex;
-    width: 50%;
+    flex: 0.6;
+    justify-content: center;
     height: 100px;
     line-height: 100px;
     color: $font-maincolor;
-    justify-content: space-around;
-    vertical-align: middle;
     margin: 80px 25% 50px 25%;
     border-radius: 15px;
     background-color: $color-back;
-    animation: animated-dots 200ms;
     &__text {
         font-family: $main-font;
         font-size: $link-fontsize;
         font-weight: 1000;
         text-decoration: none;
-    }
-    &__animated-dots {
-        font-size: 5em;
+        margin-right: 0.6em;
+    }    
+    &__dots {
+        font-size: $link-fontsize;
+        letter-spacing: 0.2em;
     }
 }
-        
+.one
+{
+    opacity: 0;
+    animation: animated-dots 1200ms 0.0s linear infinite none;
+} 
+.two
+{
+    opacity: 0;
+    animation: animated-dots 1200ms 0.3s linear infinite none;
+}     
+.three
+{
+    opacity: 0;
+    animation: animated-dots 1200ms 0.5s linear infinite none;
+}
 @media screen and (max-width: 1400px)
 {
-    .comingsoon
-    {
+    .comingsoon {
+        flex: 0.8;
+    &__text {
         font-size: 2em;
+        }     
     }  
 }
 @media screen and (max-width: 768px)
 {
-    .comingsoon
-    {
-        font-size: 1em;
-        height: 50px;
-        line-height: 50px;
-        margin-top: 50px;
-    }
+    .comingsoon {
+        &__text {
+            font-size: 1em;
+        }     
+    } 
 }
 
 /*****************MENU*************************/
@@ -298,17 +312,19 @@
         }
     }
     &__enchainement1 {
-        flex: 0.7;
-        width: 30%;
         font-size: 1.3em;
         font-family: $font-menu;
+        &:hover + .underline__line {
+            background-color: #3d1319;
+            transform-origin: left;
+            animation: underline 500ms 150ms both;
+        } 
     }
     &__enchainement2 {
-        flex: 0.8;
-        width: 30%;
-        font-size: 1.4em;
+        font-size: 1.2em;
         font-weight: bold;
         letter-spacing: 0.04em;
+        
     }
     &__enchainement {
         @include enchainement;
@@ -319,14 +335,29 @@
         &--starter {
             color: #c67412;
             height: 40px;
+            &:hover + .underline__line {
+                background-color: #c67412;
+                transform-origin: left;
+                animation: underline 500ms 150ms both;
+            }
         }
         &--maincourse {
             color: #a56799;
             height: 40px;
+            &:hover + .underline__line {
+                background-color: #a56799;
+                transform-origin: left;
+                animation: underline 500ms 150ms both;
+            }
         }
         &--desert {
             color: #6e4ccc;
             height: 40px;
+            &:hover + .underline__line {
+                background-color: #6e4ccc;
+                transform-origin: left;
+                animation: underline 500ms 150ms both;
+            }
         }
     }
 }
@@ -509,7 +540,7 @@ h3
 .separation-line
 {
     display: flex;
-    height: 50px;
+    height: 100px;
     align-items: center;
     justify-content: center;
     margin-top: 50px;
@@ -529,10 +560,23 @@ h3
         margin-bottom: 20px;
     }
 }
-.underline 
+.flex
 {
-    @include underline;
-    margin: 0 auto;
+    flex: 0.7;
+}
+.underline-size
+{
+    display: inline-block;
+}
+.underline
+{
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+    &__line {
+        @include underline;
+        justify-content: center;
+    }
 }
 .lineleft
 {

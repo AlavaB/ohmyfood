@@ -49,29 +49,13 @@
 }
 .wiggle {
     &:hover {
-        animation: wiggle 100ms cubic-bezier(.82,.11,.19,.93);
-        animation-iteration-count: 3;
+        animation: wiggle 100ms cubic-bezier(.35,.6,.65,.34);
+        animation-iteration-count: 2;
     }
 }
 .wiggle2 {
     &:hover {
-        animation: wiggle2 100ms cubic-bezier(.82,.11,.19,.93);
-        animation-iteration-count: 3;
-    }
-}
-@keyframes wiggle {
-    25% {
-        transform: translate(3%);
-    }
-    75% {
-        transform: translate(3%);
-    }
-}
-@keyframes wiggle2 {
-    25% {
-        transform: translate(-3%);
-    }
-    75% {
-        transform: translate(-3%);
+        animation: wiggle2 100ms cubic-bezier(.35,.6,.65,.34);
+        animation-iteration-count: 2;
     }
 }
