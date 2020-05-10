@@ -227,20 +227,28 @@
 } 
 .comingsoon 
 {
+    display: flex;
     width: 50%;
     height: 100px;
     line-height: 100px;
     color: $font-maincolor;
-    font-family: $main-font;
-    font-size: $link-fontsize;
-    font-weight: 1000;
-    text-align: center;
+    justify-content: space-around;
     vertical-align: middle;
     margin: 80px 25% 50px 25%;
     border-radius: 15px;
     background-color: $color-back;
-    text-decoration: none;
+    animation: animated-dots 200ms;
+    &__text {
+        font-family: $main-font;
+        font-size: $link-fontsize;
+        font-weight: 1000;
+        text-decoration: none;
+    }
+    &__animated-dots {
+        font-size: 5em;
+    }
 }
+        
 @media screen and (max-width: 1400px)
 {
     .comingsoon
@@ -501,12 +509,11 @@ h3
 .separation-line
 {
     display: flex;
-    height: 100px;
+    height: 50px;
     align-items: center;
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 20px;
-
     &__line {
         width: 100%;
         max-height: 15px;
@@ -521,6 +528,11 @@ h3
         margin-top: 30px;
         margin-bottom: 20px;
     }
+}
+.underline 
+{
+    @include underline;
+    margin: 0 auto;
 }
 .lineleft
 {
