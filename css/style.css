@@ -72,10 +72,18 @@ p {
     opacity: 0;
   }
   50% {
-    opacity: 0.5;
+    opacity: 1;
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes wiggle {
+  25% {
+    transform: translate(4%);
+  }
+  75% {
+    transform: translate(4%);
   }
 }
 @keyframes wiggle2 {
@@ -96,7 +104,6 @@ p {
 }
 header {
   width: 100%;
-  height: 200px;
   background-color: #579c87;
   color: #fdcb46;
   text-align: center;
@@ -107,14 +114,12 @@ header {
 
 @media screen and (max-width: 1400px) {
   header {
-    height: 150px;
     line-height: 150px;
   }
 }
 @media screen and (max-width: 768px) {
   header {
     width: 100%;
-    height: 100px;
     line-height: 100px;
   }
 }
@@ -366,10 +371,11 @@ h1 {
   display: flex;
   flex: 0.6;
   justify-content: center;
-  height: 100px;
-  line-height: 100px;
+  align-items: center;
   color: #fdcb46;
-  margin: 80px 25% 50px 25%;
+  margin: 70px 20% 50px 20%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-radius: 15px;
   background-color: #579c87;
 }
@@ -381,13 +387,13 @@ h1 {
   margin-right: 0.6em;
 }
 .comingsoon__dots {
-  font-size: 2.5em;
+  font-size: 3em;
   letter-spacing: 0.2em;
 }
 
 .one {
   opacity: 0;
-  animation: animated-dots 1200ms 0s linear infinite none;
+  animation: animated-dots 1200ms 0.1s linear infinite none;
 }
 
 .two {
@@ -402,15 +408,26 @@ h1 {
 
 @media screen and (max-width: 1400px) {
   .comingsoon {
-    flex: 0.8;
+    padding-right: 50px;
+    padding-left: 50px;
   }
   .comingsoon__text {
     font-size: 2em;
   }
+  .comingsoon__dots {
+    font-size: 2.3em;
+  }
 }
 @media screen and (max-width: 768px) {
+  .comingsoon {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
   .comingsoon__text {
     font-size: 1em;
+  }
+  .comingsoon__dots {
+    font-size: 1.5em;
   }
 }
 /*****************MENU*************************/
@@ -424,7 +441,7 @@ h1 {
   width: 80%;
   text-align: center;
   margin-bottom: 100px;
-  height: 1600px;
+  padding-bottom: 100px;
   font-family: "SegoePrint", Arial, Helvetica, sans-serif;
   font-size: 1.4em;
   color: #3d1319;
@@ -446,7 +463,7 @@ h1 {
   background-color: #fff5fe;
 }
 .menucard__enchainement1 {
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-family: "Segoe Print", Arial, Helvetica, sans-serif;
 }
 .menucard__enchainement1:hover + .underline__line {
@@ -473,7 +490,6 @@ h1 {
 }
 .menucard__dish--starter {
   color: #c67412;
-  height: 40px;
 }
 .menucard__dish--starter:hover + .underline__line {
   background-color: #c67412;
@@ -482,7 +498,6 @@ h1 {
 }
 .menucard__dish--maincourse {
   color: #a56799;
-  height: 40px;
 }
 .menucard__dish--maincourse:hover + .underline__line {
   background-color: #a56799;
@@ -491,7 +506,6 @@ h1 {
 }
 .menucard__dish--desert {
   color: #6e4ccc;
-  height: 40px;
 }
 .menucard__dish--desert:hover + .underline__line {
   background-color: #6e4ccc;
@@ -501,11 +515,12 @@ h1 {
 
 @media screen and (max-width: 1400px) {
   .menucard__enchainement1 {
-    font-size: 1.2em;
+    flex: 1;
+    font-size: 1.4em;
   }
   .menucard__enchainement2 {
     flex: 1;
-    font-size: 1.5em;
+    font-size: 1.7em;
   }
   .menucard__enchainement {
     flex: 1;
@@ -513,7 +528,6 @@ h1 {
   }
   .menucard__description {
     width: 95%;
-    height: 1400px;
     font-size: 1.1em;
   }
 }
@@ -524,32 +538,19 @@ h1 {
   }
   .menucard__enchainement2 {
     font-size: 1.2em;
-    margin-top: 20px;
-    margin-bottom: 15px;
   }
   .menucard__enchainement {
     flex: 1;
-    font-size: 1.1em;
+    font-size: 1em;
     margin-top: 20px;
-    margin-bottom: 15px;
   }
   .menucard__description {
     width: 95%;
-    height: 750px;
-    margin-bottom: 50px;
+    padding-bottom: 30px;
     font-size: 0.7em;
   }
   .menucard__dish {
     margin-bottom: 5px;
-  }
-  .menucard__dish--starter {
-    height: 20px;
-  }
-  .menucard__dish--maincourse {
-    height: 20px;
-  }
-  .menucard__dish--desert {
-    height: 20px;
   }
 }
 h3 {
@@ -570,7 +571,7 @@ h3 {
   }
 }
 .musicnote {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -635,21 +636,18 @@ h3 {
 }
 @media screen and (max-width: 768px) {
   .dish__description {
-    flex: 3;
     margin-left: 10px;
   }
   .dish__price {
-    flex: 0.5;
     margin-right: 10px;
   }
 }
 .separation-line {
   display: flex;
-  height: 100px;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  margin-top: 70px;
+  margin-bottom: 50px;
 }
 .separation-line__line {
   width: 100%;
@@ -659,9 +657,8 @@ h3 {
 
 @media screen and (max-width: 768px) {
   .separation-line {
-    height: 30px;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 }
 .flex {
@@ -684,12 +681,17 @@ h3 {
   justify-content: center;
 }
 
+@media screen and (max-width: 768px) {
+  .underline__line {
+    height: 3px;
+  }
+}
 .lineleft {
   flex: 1;
   margin-left: 140px;
 }
 .lineleft--menu2 {
-  flex: 1;
+  flex: 0.8;
   margin-left: 50px;
   padding-top: 10px;
 }
@@ -699,7 +701,7 @@ h3 {
   padding-top: 10px;
 }
 .lineleft--menu4 {
-  flex: 0.8;
+  flex: 0.7;
   margin-left: 50px;
   padding-top: 10px;
 }
@@ -707,9 +709,10 @@ h3 {
 @media screen and (max-width: 1400px) {
   .lineleft {
     margin-left: 50px;
+    flex: 0.7;
   }
   .lineleft--menu2 {
-    flex: 0.8;
+    flex: 0.6;
     margin-left: 20px;
   }
   .lineleft--menu3 {
@@ -717,7 +720,7 @@ h3 {
     margin-left: 20px;
   }
   .lineleft--menu4 {
-    flex: 1.4;
+    flex: 1.2;
     margin-left: 20px;
   }
 }
@@ -744,7 +747,7 @@ h3 {
   margin-right: 140px;
 }
 .lineright--menu2 {
-  flex: 1;
+  flex: 0.8;
   margin-right: 50px;
   padding-top: 10px;
 }
@@ -754,7 +757,7 @@ h3 {
   padding-top: 10px;
 }
 .lineright--menu4 {
-  flex: 0.8;
+  flex: 0.7;
   margin-right: 50px;
   padding-top: 10px;
 }
@@ -762,9 +765,10 @@ h3 {
 @media screen and (max-width: 1400px) {
   .lineright {
     margin-right: 50px;
+    flex: 0.7;
   }
   .lineright--menu2 {
-    flex: 0.8;
+    flex: 0.6;
     margin-right: 20px;
   }
   .lineright--menu3 {
@@ -772,7 +776,7 @@ h3 {
     margin-right: 20px;
   }
   .lineright--menu4 {
-    flex: 1.4;
+    flex: 1.2;
     margin-right: 20px;
   }
 }
@@ -798,13 +802,11 @@ h3 {
   position: sticky;
   bottom: 0;
   background-color: #579c87;
-  height: 150px;
   display: flex;
   justify-content: space-between;
 }
 .footblock__link {
   width: 280px;
-  height: 100px;
   line-height: 150px;
   font-family: "montserratbold", Arial, Helvetica, sans-serif;
   color: #fdcb46;
@@ -818,18 +820,12 @@ h3 {
 }
 
 @media screen and (max-width: 1400px) {
-  .footblock {
-    height: 130px;
-  }
   .footblock__link {
     font-size: 1.8em;
     line-height: 130px;
   }
 }
 @media screen and (max-width: 768px) {
-  .footblock {
-    height: 70px;
-  }
   .footblock__link {
     font-size: 1em;
     line-height: 70px;

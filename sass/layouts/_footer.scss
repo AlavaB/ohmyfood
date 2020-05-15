@@ -3,12 +3,10 @@
     position: sticky;
     bottom: 0;
     background-color: $color-back;
-    height: 150px;
     display: flex;
     justify-content: space-between;
     &__link {
         width: 280px;
-        height: 100px;
         line-height: 150px;
         font-family: $main-font;
         color: $font-maincolor;
@@ -25,7 +23,6 @@
 {
     .footblock
     {
-        height: 130px;
         &__link
         {
             font-size: 1.8em;
@@ -36,9 +33,7 @@
 @media screen and (max-width: 768px)
 {
     .footblock
-    {
-        height: 70px;
-        &__link
+    {        &__link
         {
             font-size: 1em;
             line-height: 70px;

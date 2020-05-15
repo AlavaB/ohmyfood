@@ -230,10 +230,11 @@
     display: flex;
     flex: 0.6;
     justify-content: center;
-    height: 100px;
-    line-height: 100px;
+    align-items: center;
     color: $font-maincolor;
-    margin: 80px 25% 50px 25%;
+    margin: 70px 20% 50px 20%;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-radius: 15px;
     background-color: $color-back;
     &__text {
@@ -244,14 +245,14 @@
         margin-right: 0.6em;
     }    
     &__dots {
-        font-size: $link-fontsize;
+        font-size: 3em;
         letter-spacing: 0.2em;
     }
 }
 .one
 {
     opacity: 0;
-    animation: animated-dots 1200ms 0.0s linear infinite none;
+    animation: animated-dots 1200ms 0.1s linear infinite none;
 } 
 .two
 {
@@ -266,18 +267,27 @@
 @media screen and (max-width: 1400px)
 {
     .comingsoon {
-        flex: 0.8;
-    &__text {
-        font-size: 2em;
-        }     
+        padding-right: 50px;
+        padding-left: 50px;
+        &__text {
+            font-size: 2em;
+        }
+        &__dots {
+            font-size: 2.3em;
+        }
     }  
 }
 @media screen and (max-width: 768px)
 {
     .comingsoon {
+    padding-right: 40px;
+    padding-left: 40px;
         &__text {
             font-size: 1em;
         }     
+        &__dots {
+            font-size: 1.5em;
+        }
     } 
 }
 
@@ -290,7 +300,6 @@
     align-items: center;
     &__description {
         @include description;
-        height: 1600px;
         font-family: $menu-text;
         font-size: 1.4em;
         color: #3d1319;
@@ -312,7 +321,7 @@
         }
     }
     &__enchainement1 {
-        font-size: 1.3em;
+        font-size: 1.2em;
         font-family: $font-menu;
         &:hover + .underline__line {
             background-color: #3d1319;
@@ -334,7 +343,6 @@
         margin-bottom: 15px;
         &--starter {
             color: #c67412;
-            height: 40px;
             &:hover + .underline__line {
                 background-color: #c67412;
                 transform-origin: left;
@@ -343,7 +351,6 @@
         }
         &--maincourse {
             color: #a56799;
-            height: 40px;
             &:hover + .underline__line {
                 background-color: #a56799;
                 transform-origin: left;
@@ -352,7 +359,6 @@
         }
         &--desert {
             color: #6e4ccc;
-            height: 40px;
             &:hover + .underline__line {
                 background-color: #6e4ccc;
                 transform-origin: left;
@@ -366,11 +372,12 @@
     .menucard
     {
         &__enchainement1 {
-            font-size: 1.2em;
+            flex: 1;
+            font-size: 1.4em;
         }
         &__enchainement2 {
             flex: 1;
-            font-size: 1.5em;
+            font-size: 1.7em;
         }
         &__enchainement {
             flex: 1;
@@ -379,7 +386,6 @@
         &__description
         {
             width: 95%;
-            height: 1400px;
             font-size: 1.1em;
         }
     }
@@ -395,32 +401,19 @@
         }
         &__enchainement2 {
             font-size: 1.2em;
-            margin-top: 20px;
-            margin-bottom: 15px;
         }
         &__enchainement {
             flex: 1;
-            font-size: 1.1em;
+            font-size: 1em;
             margin-top: 20px;
-            margin-bottom: 15px;
         }
         &__description {
             width: 95%;
-            height: 750px;
-            margin-bottom: 50px;
+            padding-bottom: 30px;
             font-size: 0.7em;
         }
         &__dish {
             margin-bottom: 5px;
-            &--starter {
-                height: 20px;
-            }
-            &--maincourse {
-                height: 20px;
-            }
-            &--desert {
-                height: 20px;
-            }
         }
     }   
 }
@@ -447,7 +440,7 @@ h3
 }
 .musicnote
 {
-    margin-top: 30px;
+    margin-top: 50px;
 }
 @media screen and (max-width: 1400px)
 {
@@ -528,11 +521,9 @@ h3
     .dish
     {
         &__description {
-            flex: 3;
             margin-left: 10px;
         }
         &__price {
-            flex: 0.5;
             margin-right: 10px;
         }
     }  
@@ -540,11 +531,10 @@ h3
 .separation-line
 {
     display: flex;
-    height: 100px;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 70px;
+    margin-bottom: 50px;
     &__line {
         width: 100%;
         max-height: 15px;
@@ -555,9 +545,8 @@ h3
 {
     .separation-line
     {
-        height: 30px;
-        margin-top: 30px;
-        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
 }
 .flex
@@ -578,12 +567,20 @@ h3
         justify-content: center;
     }
 }
+@media screen and (max-width: 768px) 
+{
+    .underline {
+        &__line {
+            height: 3px;
+        }
+    }
+}
 .lineleft
 {
     flex: 1;
     margin-left: 140px;
     &--menu2 {
-        flex: 1;
+        flex: 0.8;
         margin-left: 50px;
         padding-top: 10px;
     }
@@ -593,7 +590,7 @@ h3
         padding-top: 10px;
     }
     &--menu4 {
-        flex: 0.8;
+        flex: 0.7;
         margin-left: 50px;
         padding-top: 10px;
     }
@@ -603,8 +600,9 @@ h3
     .lineleft 
     {
         margin-left: 50px;
+        flex: 0.7;
         &--menu2 {
-            flex: 0.8;
+            flex: 0.6;
             margin-left: 20px;
         }
         &--menu3 {
@@ -612,7 +610,7 @@ h3
             margin-left: 20px;
         }
         &--menu4 {
-            flex: 1.4;
+            flex: 1.2;
             margin-left: 20px;
         }
     }
@@ -643,7 +641,7 @@ h3
     flex: 1;
     margin-right: 140px;
     &--menu2 {
-        flex: 1;
+        flex: 0.8;
         margin-right: 50px;
         padding-top: 10px;
     } 
@@ -653,7 +651,7 @@ h3
         padding-top: 10px;
     }   
     &--menu4 {
-        flex: 0.8;
+        flex: 0.7;
         margin-right: 50px;
         padding-top: 10px;
     }
@@ -663,8 +661,9 @@ h3
     .lineright
     {
         margin-right: 50px;
+        flex: 0.7;
         &--menu2 {
-            flex: 0.8;
+            flex: 0.6;
             margin-right: 20px;
         }
         &--menu3 {
@@ -672,7 +671,7 @@ h3
             margin-right: 20px;
         }
         &--menu4 {
-            flex: 1.4;
+            flex: 1.2;
             margin-right: 20px;
         }
     }
