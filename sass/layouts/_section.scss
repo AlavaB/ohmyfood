@@ -290,7 +290,16 @@
         }
     } 
 }
-
+.zoom
+{   
+    transform: scale(1);
+    transition: transform 1000ms, 400ms;
+    opacity: 1;
+    &:hover {
+        transform: scale(1.4);
+        opacity: 0.5;
+    }
+}
 /*****************MENU*************************/
 .menucard
 {
