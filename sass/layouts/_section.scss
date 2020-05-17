@@ -7,11 +7,9 @@
 }
 @media screen and (max-width: 768px)
 {
-    .home-page
-    {
+    .home-page {
         flex-direction: column;
         align-items: center;
-        width: 100%;
     }
 }
 .link
@@ -31,8 +29,7 @@
 }
 @media screen and (max-width: 768px)
 {
-    .link
-    {
+    .link {
         width: 70%;
         &__margintop {
             margin-top: 30px;
@@ -53,27 +50,31 @@
     text-align: center;
     justify-content: center;
     box-shadow: 2px 2px 24px #ededed;
+    font-size: 2.2vw;
+    & p {
+        font-size: 3.5vw;
+        margin-top: 40px;
+    }
     &__heading1 {
-        font-size: 3.5em;
         font-family: $menu1-font;
         color: $menu1-color;       
         font-weight: normal;
         & + p {
             color: $menu1-color;
             font-family: $font-menu;
-            font-size: 4em;
             margin-top: 15px;
+        }
+        &--menucard1 {
+            font-size: 5vw;
         }
     }
     &__heading2 {       
         @include menu2;
         font-family: $menu2-font;
-        font-size: 3em;
+        font-size: 2.3vw;
         & + p {
             font-family: 'Leo', Arial, Helvetica, sans-serif;
             color: #d8852e;
-            font-size: 4em;
-            margin-top: 40px;
         }
         &--menucard2 {
             font-size: 2.3em;
@@ -81,32 +82,26 @@
         }
     } 
     &__heading3 {
-        font-size: 4em;
-        font-family: $menu3-font;
         @include menu3;
+        font-family: $menu3-font;
         & + p {
             color: #0887fb;
             font-family: $font-menu;
-            font-size: 4em;
-            margin-top: 40px;
         }
         &--menucard3 {
-            font-size: 4.5em;
+            font-size: 5vw;
             @include margin-heading;
             }
     }
     &__heading4 {
-        font-size: 4em;
-        font-family: $menu4-font;
         @include menu4;      
+        font-family: $menu4-font;
         & + p {
             color: #72bf56;
             font-family: $font-menu;
-            font-size: 4em;
-            margin-top: 40px;
         }
         &--menucard4 {
-            font-size: 4.5em;
+            font-size: 5vw;
             @include margin-heading;
             }
     }
@@ -134,38 +129,24 @@
     {
         height: 600px;
         margin: 20px;
+        font-size: 2.1vw;
         &__marginleft {
             margin-left: 50px;
         }
         &__marginright {
             margin-right: 50px;
         }
-        &__heading1 {
-            font-size: 2.8em;
-            & + p {
-                font-size: 2em;
-            }
-        }
         &__heading2 {
-            font-size: 1.7em;
-            & + p {
-                font-size: 2.5em;
+            &--menucard2 {
+                font-size: 5em;
             }
-        }
-        &__heading3 {
-            font-size: 2.5em;
             & + p {
-                font-size: 2.5em;
-            }
-        }
-        &__heading4 {
-            font-size: 2.5em;
-            & + p {
-                font-size: 2.5em;
+                font-size: 3vw;
             }
         }
     }
 }
+
 @media screen and (max-width: 768px)
 {
     .menu
@@ -173,13 +154,13 @@
         height: 300px;
         margin: 0%;
         &__heading1 {
-            font-size: 2.5em;
+            font-size: 5vw;
             & + p {
                 font-size: 1.2em;
             } 
         }         
         &__heading2 {
-            font-size: 1.5em;
+            font-size: 4vw;
             & + p {
                 font-size: 1.3em;
             }
@@ -189,7 +170,7 @@
             }
         }   
         &__heading3 {
-            font-size: 2em;
+            font-size: 5vw;
             & + p {
                 font-size: 1.3em;
             } 
@@ -199,7 +180,7 @@
             }
         }       
         &__heading4 {
-            font-size: 2em;
+            font-size: 5vw;
             & + p {
                 font-size: 1.3em;
             }
@@ -237,15 +218,14 @@
     padding-bottom: 20px;
     border-radius: 15px;
     background-color: $color-back;
+    font-size: $link-fontsize;
     &__text {
         font-family: $main-font;
-        font-size: $link-fontsize;
         font-weight: 1000;
         text-decoration: none;
         margin-right: 0.6em;
     }    
     &__dots {
-        font-size: 3em;
         letter-spacing: 0.2em;
     }
 }
@@ -268,32 +248,20 @@
 {
     .comingsoon {
         padding-right: 50px;
-        padding-left: 50px;
-        &__text {
-            font-size: 2em;
-        }
-        &__dots {
-            font-size: 2.3em;
-        }
-    }  
+        padding-left: 50px;  
+    }
 }
 @media screen and (max-width: 768px)
 {
     .comingsoon {
     padding-right: 40px;
-    padding-left: 40px;
-        &__text {
-            font-size: 1em;
-        }     
-        &__dots {
-            font-size: 1.5em;
-        }
-    } 
+    padding-left: 40px; 
+    }
 }
 .zoom
 {   
     transform: scale(1);
-    transition: transform 1000ms, 400ms;
+    transition: transform 300ms, 400ms;
     opacity: 1;
     &:hover {
         transform: scale(1.4);
@@ -389,8 +357,8 @@
             font-size: 1.7em;
         }
         &__enchainement {
-            flex: 1;
-            font-size: 1em;
+            flex: 1.2;
+            font-size: 1.5em;
         }
         &__description
         {
@@ -409,7 +377,7 @@
             font-size: 1.3em;
         }
         &__enchainement2 {
-            font-size: 1.2em;
+            font-size: 1em;
         }
         &__enchainement {
             flex: 1;
@@ -560,7 +528,7 @@ h3
 }
 .flex
 {
-    flex: 0.7;
+    flex: 0.9;
 }
 .underline-size
 {
@@ -591,7 +559,7 @@ h3
     &--menu2 {
         flex: 0.8;
         margin-left: 50px;
-        padding-top: 10px;
+        padding-top: 5px;
     }
     &--menu3 {
         flex: 0.6;
@@ -615,7 +583,7 @@ h3
             margin-left: 20px;
         }
         &--menu3 {
-            flex: 1;
+            flex: 0.8;
             margin-left: 20px;
         }
         &--menu4 {
@@ -629,11 +597,11 @@ h3
 {
     .lineleft
     {
-        flex: 0.7;
+        flex: 0.6;
         margin-left: 10px;
         &--menu2 {
             flex: 0.6;
-            margin-left: 10px;
+            margin-left: 5px;
         }
         &--menu3 {
             flex: 0.7;
@@ -652,7 +620,7 @@ h3
     &--menu2 {
         flex: 0.8;
         margin-right: 50px;
-        padding-top: 10px;
+        padding-top: 5px;
     } 
     &--menu3 {
         flex: 0.6;
@@ -676,7 +644,7 @@ h3
             margin-right: 20px;
         }
         &--menu3 {
-            flex: 1;
+            flex: 0.8;
             margin-right: 20px;
         }
         &--menu4 {
@@ -689,11 +657,11 @@ h3
 {
     .lineright
     {
-        flex: 0.7;
+        flex: 0.6;
         margin-right: 10px;
         &--menu2 {
             flex: 0.6;
-            margin-right: 10px;
+            margin-right: 5px;
         }
         &--menu3 {
             flex: 0.7;
