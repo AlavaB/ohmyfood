@@ -190,20 +190,17 @@ h1 {
   text-align: center;
   justify-content: center;
   box-shadow: 2px 2px 24px #ededed;
-  font-size: 2.2vw;
-}
-.menu p {
-  font-size: 3.5vw;
-  margin-top: 40px;
 }
 .menu__heading1 {
   font-family: "devonshireregular", Arial, Helvetica, sans-serif;
   color: #3c1218;
   font-weight: normal;
+  font-size: 3vw;
 }
 .menu__heading1 + p {
   color: #3c1218;
   font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+  font-size: 3.5vw;
   margin-top: 15px;
 }
 .menu__heading1--menucard1 {
@@ -215,11 +212,13 @@ h1 {
   -webkit-text-fill-color: transparent;
   font-weight: normal;
   font-family: "croissant_oneregular", Arial, Helvetica, sans-serif;
-  font-size: 2.3vw;
+  font-size: 2.5vw;
 }
 .menu__heading2 + p {
+  font-size: 3.5vw;
   font-family: "Leo", Arial, Helvetica, sans-serif;
   color: #d8852e;
+  margin-top: 40px;
 }
 .menu__heading2--menucard2 {
   font-size: 2.3em;
@@ -232,10 +231,14 @@ h1 {
   -webkit-text-fill-color: transparent;
   font-weight: normal;
   font-family: "dancing_scriptregular", Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  padding-left: 5px;
 }
 .menu__heading3 + p {
+  font-size: 3.5vw;
   color: #0887fb;
   font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+  margin-top: 40px;
 }
 .menu__heading3--menucard3 {
   font-size: 5vw;
@@ -248,10 +251,13 @@ h1 {
   -webkit-text-fill-color: transparent;
   font-weight: normal;
   font-family: "kaushan_scriptregular", Arial, Helvetica, sans-serif;
+  font-size: 3vw;
 }
 .menu__heading4 + p {
+  font-size: 3.5vw;
   color: #72bf56;
   font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+  margin-top: 40px;
 }
 .menu__heading4--menucard4 {
   font-size: 5vw;
@@ -288,12 +294,6 @@ h1 {
   .menu__marginright {
     margin-right: 50px;
   }
-  .menu__heading2--menucard2 {
-    font-size: 5em;
-  }
-  .menu__heading2 + p {
-    font-size: 3vw;
-  }
 }
 @media screen and (max-width: 768px) {
   .menu {
@@ -301,36 +301,36 @@ h1 {
     margin: 0%;
   }
   .menu__heading1 {
-    font-size: 5vw;
+    font-size: 7vw;
   }
   .menu__heading1 + p {
-    font-size: 1.2em;
+    font-size: 6vw;
   }
   .menu__heading2 {
-    font-size: 4vw;
+    font-size: 5vw;
   }
   .menu__heading2 + p {
-    font-size: 1.3em;
+    font-size: 6vw;
   }
   .menu__heading2--menucard2 {
     margin-top: 50px;
     margin-bottom: 60px;
   }
   .menu__heading3 {
-    font-size: 5vw;
+    font-size: 6vw;
   }
   .menu__heading3 + p {
-    font-size: 1.3em;
+    font-size: 6vw;
   }
   .menu__heading3--menucard3 {
     margin-top: 50px;
     margin-bottom: 60px;
   }
   .menu__heading4 {
-    font-size: 5vw;
+    font-size: 6vw;
   }
   .menu__heading4 + p {
-    font-size: 1.3em;
+    font-size: 6vw;
   }
   .menu__heading4--menucard4 {
     margin-top: 50px;
@@ -398,12 +398,13 @@ h1 {
   }
 }
 .zoom {
-  transform: scale(1);
+  display: inline-block;
+  margin: auto;
   transition: transform 300ms, 400ms;
   opacity: 1;
 }
 .zoom:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
   opacity: 0.5;
 }
 
@@ -518,8 +519,8 @@ h1 {
   }
   .menucard__enchainement {
     flex: 1;
-    font-size: 1em;
-    margin-top: 20px;
+    font-size: 1.3em;
+    margin-top: 10px;
   }
   .menucard__description {
     width: 95%;
@@ -675,7 +676,7 @@ h3 {
 .lineleft--menu3 {
   flex: 0.6;
   margin-left: 60px;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 .lineleft--menu4 {
   flex: 0.7;
@@ -731,7 +732,7 @@ h3 {
 .lineright--menu3 {
   flex: 0.6;
   margin-right: 60px;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 .lineright--menu4 {
   flex: 0.7;
