@@ -25,7 +25,7 @@
     }
     &__marginright {
         margin-right: 50px;
-    }    
+    }
 }
 @media screen and (max-width: 768px)
 {
@@ -50,7 +50,10 @@
     text-align: center;
     justify-content: center;
     box-shadow: 2px 2px 24px #ededed;
-    
+    &:hover > .zoom {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
     &__heading1 {
         font-family: $menu1-font;
         color: $menu1-color;       
@@ -252,8 +255,9 @@
 @media screen and (max-width: 768px)
 {
     .comingsoon {
-    padding-right: 40px;
-    padding-left: 40px; 
+        font-size: 1em;
+        padding-right: 40px;
+        padding-left: 40px; 
     }
 }
 .zoom
@@ -261,11 +265,7 @@
     display: inline-block;
     margin: auto;
     transition: transform 300ms, 400ms;
-    opacity: 1;
-    &:hover {
-        transform: scale(1.2);
-        opacity: 0.5;
-    }
+    opacity: 1;    
 }
 /*****************MENU*************************/
 .menucard
@@ -560,6 +560,7 @@ h3
     &--menu2 {
         flex: 0.8;
         margin-left: 50px;
+        margin-bottom: 10px;
         padding-top: 5px;
     }
     &--menu3 {
@@ -621,6 +622,7 @@ h3
     &--menu2 {
         flex: 0.8;
         margin-right: 50px;
+        margin-bottom: 10px;
         padding-top: 5px;
     } 
     &--menu3 {

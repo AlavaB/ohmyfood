@@ -191,6 +191,10 @@ h1 {
   justify-content: center;
   box-shadow: 2px 2px 24px #ededed;
 }
+.menu:hover > .zoom {
+  transform: scale(1.2);
+  opacity: 0.5;
+}
 .menu__heading1 {
   font-family: "devonshireregular", Arial, Helvetica, sans-serif;
   color: #3c1218;
@@ -393,6 +397,7 @@ h1 {
 }
 @media screen and (max-width: 768px) {
   .comingsoon {
+    font-size: 1em;
     padding-right: 40px;
     padding-left: 40px;
   }
@@ -402,10 +407,6 @@ h1 {
   margin: auto;
   transition: transform 300ms, 400ms;
   opacity: 1;
-}
-.zoom:hover {
-  transform: scale(1.2);
-  opacity: 0.5;
 }
 
 /*****************MENU*************************/
@@ -674,6 +675,7 @@ h3 {
 .lineleft--menu2 {
   flex: 0.8;
   margin-left: 50px;
+  margin-bottom: 10px;
   padding-top: 5px;
 }
 .lineleft--menu3 {
@@ -730,6 +732,7 @@ h3 {
 .lineright--menu2 {
   flex: 0.8;
   margin-right: 50px;
+  margin-bottom: 10px;
   padding-top: 5px;
 }
 .lineright--menu3 {
